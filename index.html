@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DelayPay – Flight delayed? We get you paid.</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap">
+
+  <style>
+    :root{
+      --background: oklch(0.972 0.006 260);
+      --foreground: oklch(0.28 0.025 262);
+      --card: oklch(1 0 0);
+      --card-foreground: oklch(0.28 0.025 262);
+      --muted-foreground: oklch(0.55 0.02 262);
+      --accent: oklch(0.93 0.03 253);
+      --accent-foreground: oklch(0.4 0.1 253);
+      --border: oklch(0.9 0.008 260);
+      --navy: oklch(0.19 0.03 262);
+      --navy-foreground: oklch(0.97 0.006 260);
+      --navy-muted: oklch(0.7 0.02 262);
+      --brand: oklch(0.62 0.17 253);
+      --brand-foreground: oklch(0.99 0 0);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0; font-family:'Geist', ui-sans-serif, system-ui, -apple-system, sans-serif; background:var(--background); color:var(--foreground); -webkit-font-smoothing:antialiased;}
+    a{color:inherit; text-decoration:none;}
+    a:hover{color:var(--brand);}
+    button{font-family:inherit; cursor:pointer;}
+  </style>
+
+<style>
+  html, body { overflow-x: auto; }
+  body { display: flex; justify-content: center; }
+</style>
+</head>
+<body>
+<div style="position:relative; width:1440px; background:var(--background);">
+
+  <!-- ================= HERO ================= -->
+  <section style="position:relative; overflow:hidden; background:var(--navy); color:var(--navy-foreground);">
+    <div style="position:absolute; left:50%; top:50%; width:640px; height:640px; transform:translate(-50%,-50%); border-radius:9999px; background:oklch(0.62 0.17 253 / 0.2); filter:blur(90px); pointer-events:none;"></div>
+
+    <div style="position:relative; max-width:1152px; margin:0 auto; padding:24px 24px 0;">
+      <!-- top nav -->
+      <header style="display:flex; align-items:center; justify-content:space-between; border-radius:9999px; background:oklch(0.97 0.006 260 / 0.05); box-shadow: inset 0 0 0 1px oklch(0.97 0.006 260 / 0.1); padding:8px;">
+        <a href="#" style="display:flex; align-items:center; gap:8px; border-radius:9999px; background:var(--navy-foreground); padding:8px 16px;">
+          <span style="position:relative; display:inline-flex; align-items:center; font-size:20px; font-weight:700; letter-spacing:-0.02em; color:var(--navy);">Dela<span style="position:relative">y<svg aria-hidden="true" viewBox="0 0 28 16" style="position:absolute; top:-7px; left:50%; width:22px; height:11px; transform:translateX(-50%); color:var(--brand);" fill="none"><path d="M2 12 L11 4 L15 9 L26 2" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pay</span>
+        </a>
+        <nav style="display:flex; align-items:center; gap:4px;">
+          <a href="#" style="padding:6px 12px; border-radius:9999px; font-size:18px; font-weight:500; color:var(--navy-muted);">Who we are</a>
+          <a href="#" style="padding:6px 12px; border-radius:9999px; font-size:18px; font-weight:500; color:var(--navy-muted);">Products</a>
+          <a href="#" style="padding:6px 12px; border-radius:9999px; font-size:18px; font-weight:500; color:var(--navy-muted);">Success stories</a>
+          <a href="#" style="padding:6px 12px; border-radius:9999px; font-size:18px; font-weight:500; color:var(--navy-muted);">Airlines</a>
+          <a href="#" style="padding:6px 12px; border-radius:9999px; font-size:18px; font-weight:500; color:var(--navy-muted);">Contact</a>
+          <a href="#" style="padding:6px 12px; border-radius:9999px; font-size:18px; font-weight:500; color:var(--navy-muted);">Work with us</a>
+        </nav>
+        <nav style="display:flex; align-items:center; gap:4px; padding-right:8px;">
+          <a href="#" style="border-radius:9999px; background:var(--brand); padding:6px 12px; font-size:12px; font-weight:600; color:var(--brand-foreground);">EN</a>
+          <a href="#" style="border-radius:9999px; padding:6px 10px; font-size:12px; font-weight:500; color:var(--navy-muted);">HE</a>
+          <a href="#" style="border-radius:9999px; padding:6px 10px; font-size:12px; font-weight:500; color:var(--navy-muted);">AR</a>
+          <a href="#" style="border-radius:9999px; padding:6px 10px; font-size:12px; font-weight:500; color:var(--navy-muted);">RU</a>
+        </nav>
+      </header>
+
+      <!-- intro -->
+      <div style="margin:48px auto 0; max-width:672px; text-align:center;">
+        <span style="display:inline-block; border-radius:9999px; background:oklch(0.97 0.006 260 / 0.1); padding:4px 12px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--brand);">AI-Powered Passenger Claims</span>
+        <h1 style="margin:24px 0 0; font-size:60px; font-weight:700; line-height:0.95; letter-spacing:-0.02em;">Flight delayed? We get you paid.</h1>
+        <p style="margin:24px auto 0; max-width:576px; font-size:16px; line-height:1.6; color:var(--navy-muted);">DelayPay recovers compensation for delayed flights, cancellations, and baggage issues — end to end, on a no win, no fee basis.</p>
+      </div>
+
+      <!-- cards + plane -->
+      <div style="margin-top:48px; display:grid; grid-template-columns: 1fr 1.7fr 1fr; gap:24px; align-items:center;">
+        <div style="display:flex; flex-direction:column; gap:24px;">
+          <div style="display:flex; flex-direction:column; align-items:center; text-align:center; border-radius:26px; border:1px solid oklch(0.97 0.006 260 / 0.1); background:oklch(0.97 0.006 260 / 0.05); padding:24px;">
+            <span style="display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:20px; background:var(--brand); color:var(--brand-foreground);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+            </span>
+            <h3 style="margin:16px 0 0; font-size:24px; font-weight:700; letter-spacing:-0.02em;">Flight delays</h3>
+            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--navy-muted);">Delayed 3+ hours? You may be owed up to €600 in compensation.</p>
+            <span style="margin-top:12px; display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--brand);">Check this claim
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; text-align:center; border-radius:26px; border:1px solid oklch(0.97 0.006 260 / 0.1); background:oklch(0.97 0.006 260 / 0.05); padding:24px;">
+            <span style="display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:20px; background:var(--brand); color:var(--brand-foreground);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12 L13 9 L10 3 L8 3 L10 9 L4 11 L2 10 L1 11 L4 13 L3 15 L5 15 L7 13 L10 13 L9 20 L7 21 L7 22 L11 22 L13 13 Z"/></svg>
+            </span>
+            <h3 style="margin:16px 0 0; font-size:24px; font-weight:700; letter-spacing:-0.02em;">Denied boarding</h3>
+            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--navy-muted);">Bumped from an overbooked flight? That qualifies for a payout.</p>
+            <span style="margin-top:12px; display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--brand);">Check this claim
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div style="position:relative; margin:0 auto; width:100%;">
+          <div style="position:absolute; inset:0; z-index:-1; border-radius:9999px; background:oklch(0.62 0.17 253 / 0.3); filter:blur(70px);"></div>
+          <img src="airplane-nose.jpg" alt="Front view of a commercial airplane nose and cockpit" style="margin:0 auto; width:100%; max-width:none; transform:scale(1.15); display:block; filter:drop-shadow(0 25px 40px rgb(0 0 0 / 0.35));">
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:24px;">
+          <div style="display:flex; flex-direction:column; align-items:center; text-align:center; border-radius:26px; border:1px solid oklch(0.97 0.006 260 / 0.1); background:oklch(0.97 0.006 260 / 0.05); padding:24px;">
+            <span style="display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:20px; background:var(--brand); color:var(--brand-foreground);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="5.5" y1="5.5" x2="18.5" y2="18.5"/></svg>
+            </span>
+            <h3 style="margin:16px 0 0; font-size:24px; font-weight:700; letter-spacing:-0.02em;">Cancellations</h3>
+            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--navy-muted);">Last-minute cancellation without notice? We claim what you are owed.</p>
+            <span style="margin-top:12px; display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--brand);">Check this claim
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; text-align:center; border-radius:26px; border:1px solid oklch(0.97 0.006 260 / 0.1); background:oklch(0.97 0.006 260 / 0.05); padding:24px;">
+            <span style="display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:20px; background:var(--brand); color:var(--brand-foreground);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="9" y1="12" x2="9" y2="16"/><line x1="15" y1="12" x2="15" y2="16"/></svg>
+            </span>
+            <h3 style="margin:16px 0 0; font-size:24px; font-weight:700; letter-spacing:-0.02em;">Baggage issues</h3>
+            <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--navy-muted);">Lost, delayed, or damaged bags are covered end to end.</p>
+            <span style="margin-top:12px; display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:var(--brand);">Check this claim
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div style="margin:48px 0 0; padding-bottom:48px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px;">
+        <button style="display:inline-flex; align-items:center; gap:8px; border-radius:9999px; border:none; background:var(--navy-foreground); color:var(--navy); padding:16px 28px; font-size:16px; font-weight:600;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="10 8.5 15.5 12 10 15.5" fill="currentColor" stroke="none"/></svg>
+          Tutorial videos (placeholder)
+        </button>
+        <button style="display:inline-flex; align-items:center; gap:8px; border-radius:9999px; background:var(--brand); color:var(--brand-foreground); padding:16px 28px; font-size:16px; font-weight:600; border:none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r="0.6" fill="currentColor" stroke="none"/><circle cx="12" cy="11" r="0.6" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r="0.6" fill="currentColor" stroke="none"/><circle cx="8" cy="15" r="0.6" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r="0.6" fill="currentColor" stroke="none"/><circle cx="16" cy="15" r="0.6" fill="currentColor" stroke="none"/><circle cx="8" cy="19" r="0.6" fill="currentColor" stroke="none"/><line x1="12" y1="19" x2="16" y2="19"/></svg>
+          Click here to calculate your compensation
+        </button>
+        <a href="claim.html" style="border-radius:9999px; background:var(--navy-foreground); color:var(--navy); padding:16px 24px; font-size:16px; font-weight:600;">Start a free claim</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AIRLINES STRIP ================= -->
+  <section style="background:var(--background); border-bottom:1px solid var(--border);">
+    <div style="max-width:1152px; margin:0 auto; padding:32px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px;">
+      <p style="max-width:320px; font-size:14px; color:var(--muted-foreground); margin:0;">We work across major airlines and passenger-compensation frameworks.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:10px;">
+        <span style="border-radius:9999px; border:1px solid var(--border); background:var(--card); padding:8px 16px; font-size:14px; font-weight:500;">EU261</span>
+        <span style="border-radius:9999px; border:1px solid var(--border); background:var(--card); padding:8px 16px; font-size:14px; font-weight:500;">Montreal Convention</span>
+        <span style="border-radius:9999px; border:1px solid var(--border); background:var(--card); padding:8px 16px; font-size:14px; font-weight:500;">El Al</span>
+        <span style="border-radius:9999px; border:1px solid var(--border); background:var(--card); padding:8px 16px; font-size:14px; font-weight:500;">Lufthansa</span>
+        <span style="border-radius:9999px; border:1px solid var(--border); background:var(--card); padding:8px 16px; font-size:14px; font-weight:500;">Ryanair</span>
+        <span style="border-radius:9999px; border:1px solid var(--border); background:var(--card); padding:8px 16px; font-size:14px; font-weight:500;">Turkish Airlines</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section style="background:var(--background);">
+    <div style="max-width:1152px; margin:0 auto; padding:96px 24px 0;">
+      <span style="display:inline-block; border-radius:9999px; background:var(--accent); padding:4px 12px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent-foreground);">How it works</span>
+      <h2 style="margin:16px 0 0; max-width:672px; font-size:36px; font-weight:700; letter-spacing:-0.02em;">Four simple steps from disruption to payout</h2>
+      <div style="margin-top:40px; display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:9999px; background:var(--accent); color:var(--accent-foreground); font-size:14px; font-weight:700;">01</span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">Open the claim</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Submit your flight or baggage details in a few minutes.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:9999px; background:var(--accent); color:var(--accent-foreground); font-size:14px; font-weight:700;">02</span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">Upload the documents</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Tickets, boarding passes, baggage reports, and related proof.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:9999px; background:var(--accent); color:var(--accent-foreground); font-size:14px; font-weight:700;">03</span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">We handle the airline</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Our team manages the correspondence and follow-up process.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:9999px; background:var(--accent); color:var(--accent-foreground); font-size:14px; font-weight:700;">04</span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">You get paid</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">If compensation is secured, we transfer the balance after fees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY DELAYPAY ================= -->
+  <section style="background:var(--background);">
+    <div style="max-width:1152px; margin:0 auto; padding:96px 24px 0;">
+      <span style="display:inline-block; border-radius:9999px; background:var(--accent); padding:4px 12px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent-foreground);">Why DelayPay</span>
+      <h2 style="margin:16px 0 0; max-width:672px; font-size:36px; font-weight:700; letter-spacing:-0.02em;">Built for clarity, speed, and low friction</h2>
+      <div style="margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:28px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:20px; background:var(--accent); color:var(--accent-foreground);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L14.5 4 L18 3.5 L18.5 7 L21 9 L19.5 12 L21 15 L18.5 17 L18 20.5 L14.5 20 L12 22 L9.5 20 L6 20.5 L5.5 17 L3 15 L4.5 12 L3 9 L5.5 7 L6 3.5 L9.5 4 Z"/><path d="M12 7v10M14.5 9.5c0-1-1-1.5-2.5-1.5s-2.5.6-2.5 1.6c0 2 5 .9 5 2.9 0 1-1 1.6-2.5 1.6s-2.5-.6-2.5-1.6"/></svg>
+          </span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">Transparent pricing</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">No win, no fee. We only charge when compensation is actually collected.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:28px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:20px; background:var(--accent); color:var(--accent-foreground);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="5" rx="1"/><rect x="13" y="10" width="8" height="11" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/></svg>
+          </span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">Dedicated portal</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Track documents, status updates, and next actions from one place.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:28px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <span style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:20px; background:var(--accent); color:var(--accent-foreground);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12v9H9l-4 4v-4H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z"/><path d="M17 8h2a1 1 0 0 1 1 1v9l-3-3h-7"/></svg>
+          </span>
+          <h3 style="margin:20px 0 0; font-size:18px; font-weight:600; letter-spacing:-0.01em;">Human support</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Reach us by email or WhatsApp when you need help with your case.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section style="background:var(--background);">
+    <div style="max-width:1152px; margin:0 auto; padding:96px 24px 0;">
+      <div style="position:relative; overflow:hidden; border-radius:32px; background:var(--brand); color:var(--brand-foreground); padding:56px 48px;">
+        <div style="position:absolute; right:-64px; top:-64px; width:256px; height:256px; border-radius:9999px; background:rgb(255 255 255 / 0.15); filter:blur(40px); pointer-events:none;"></div>
+        <div style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:32px;">
+          <div style="max-width:576px;">
+            <p style="margin:0; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:rgb(255 255 255 / 0.8);">Ready to check your case?</p>
+            <h2 style="margin:12px 0 0; font-size:36px; font-weight:700; letter-spacing:-0.02em;">Open a claim in minutes.</h2>
+            <p style="margin:12px 0 0; line-height:1.6; color:rgb(255 255 255 / 0.9);">Start with the passenger portal and upload the relevant documents when you are ready.</p>
+          </div>
+          <a href="claim.html" style="flex-shrink:0; border-radius:9999px; background:var(--navy-foreground); color:var(--navy); padding:12px 24px; font-size:14px; font-weight:600;">Go to the claim portal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section style="background:var(--background);">
+    <div style="max-width:1152px; margin:0 auto; padding:96px 24px 112px;">
+      <span style="display:inline-block; border-radius:9999px; background:var(--accent); padding:4px 12px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent-foreground);">FAQ</span>
+      <h2 style="margin:16px 0 0; font-size:36px; font-weight:700; letter-spacing:-0.02em;">Common questions</h2>
+      <div style="margin-top:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <h3 style="margin:0; font-size:16px; font-weight:600;">When do I pay?</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Only after a successful recovery, according to the agreed fee model.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <h3 style="margin:0; font-size:16px; font-weight:600;">What documents should I prepare?</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Usually your ticket, boarding pass, baggage report if relevant, and any airline correspondence.</p>
+        </div>
+        <div style="border-radius:26px; border:1px solid var(--border); background:var(--card); padding:24px; box-shadow:0 1px 2px rgb(0 0 0 / 0.05);">
+          <h3 style="margin:0; font-size:16px; font-weight:600;">How do I track progress?</h3>
+          <p style="margin:8px 0 0; font-size:14px; line-height:1.6; color:var(--muted-foreground);">Through the customer portal at <a href="#" style="font-weight:500; color:var(--brand);">portal.delaypay.co.il</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <section style="background:var(--navy); color:var(--navy-foreground);">
+    <div style="max-width:1152px; margin:0 auto; padding:56px 24px; display:grid; grid-template-columns:repeat(3,1fr); gap:40px;">
+      <div>
+        <span style="display:inline-flex; border-radius:9999px; background:var(--navy-foreground); padding:8px 16px;">
+          <span style="position:relative; display:inline-flex; align-items:center; font-size:18px; font-weight:700; letter-spacing:-0.02em; color:var(--navy);">Dela<span style="position:relative">y<svg aria-hidden="true" viewBox="0 0 28 16" style="position:absolute; top:-6px; left:50%; width:20px; height:10px; transform:translateX(-50%); color:var(--brand);" fill="none"><path d="M2 12 L11 4 L15 9 L26 2" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pay</span>
+        </span>
+        <p style="margin:20px 0 0; max-width:320px; font-size:14px; line-height:1.6; color:var(--navy-muted);">Operated by G.G.C INITIATIVE AND HOLDINGS LTD. Passenger-claim services for delayed flights, cancelled flights, and baggage disruptions.</p>
+      </div>
+      <div>
+        <h3 style="margin:0; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--navy-muted);">Support</h3>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:12px;">
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">info@delaypay.co.il</a>
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">077-5511821</a>
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--navy-muted);">Legal</h3>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:12px;">
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">Terms of Use</a>
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">Privacy Policy</a>
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">Cookie Policy</a>
+          <a href="#" style="font-size:14px; color:rgb(255 255 255 / 0.9);">Accessibility Statement</a>
+          <button style="text-align:left; background:none; border:none; padding:0; font-size:14px; color:rgb(255 255 255 / 0.9);">Cookie settings</button>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgb(255 255 255 / 0.1);">
+      <div style="max-width:1152px; margin:0 auto; padding:20px 24px; font-size:12px; color:var(--navy-muted);">© 2026 DelayPay. All rights reserved.</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
