@@ -1,0 +1,28 @@
+import * as original from '@snapshot/lib/client/portal-theme';
+import {surfaceTokens as t} from './surface-tokens';
+export * from '@snapshot/lib/client/portal-theme';
+// Keep original keys and layout properties; replace presentation values only.
+const redesigned=new URLSearchParams(location.search).get('appearance')!=='original';
+export const colors=redesigned?{...original.colors,bg:t.canvas,bgSecondary:t.paper,bgTertiary:t.tint,text:t.ink,textSecondary:'#31394f',textMuted:t.muted,textLight:t.muted,textVeryLight:t.muted,primary:t.blue,primaryLight:'#5b8ef0',primaryBg:t.tint,accent:'#dce8fb',accentBg:t.tint,border:t.line,borderLight:t.line,borderDark:t.lineStrong}:original.colors;
+export const radius=redesigned?{...original.radius,sm:7,md:t.fieldRadius,lg:t.radius,xl:t.radius}:original.radius;
+export const fontSize=redesigned?{...original.fontSize,xs:13,sm:14,md:16,lg:18,xl:20,xxl:24,h3:22,h2:28,h1:42}:original.fontSize;
+export const shadows=redesigned?{...original.shadows,sm:t.shadow,md:t.shadow,lg:t.dialogShadow}:original.shadows;
+export const primaryFill=redesigned?t.blue:original.primaryFill;
+export const fontFamily=redesigned?"'Geist','Heebo','Noto Sans Arabic',sans-serif":original.fontFamily;
+const presentation=(source:any,paint:any)=>redesigned?{...source,...paint}:source;
+const panel={padding:28,background:t.paper,color:t.ink,border:`1px solid ${t.line}`,borderRadius:t.radius,boxShadow:t.shadow};
+export const cardStyle=presentation(original.cardStyle,panel);
+export const cardHoverStyle=presentation(original.cardHoverStyle,panel);
+export const metricCardStyle=presentation(original.metricCardStyle,panel);
+export const sectionStyle=presentation(original.sectionStyle,{...panel,padding:32});
+export const inputStyle=presentation(original.inputStyle,{padding:'15px 16px',fontSize:16,background:t.field,color:t.ink,border:`1px solid ${t.lineStrong}`,borderRadius:t.fieldRadius});
+const action={padding:'15px 22px',minHeight:54,fontSize:16,fontWeight:550,background:t.blue,color:'#ffffff',borderRadius:t.fieldRadius};
+export const primaryButtonStyle=presentation(original.primaryButtonStyle,action);
+export const secondaryButtonStyle=presentation(original.secondaryButtonStyle,{background:t.paper,color:t.ink,border:`1px solid ${t.lineStrong}`,borderRadius:t.fieldRadius});
+export const dangerButtonStyle=presentation(original.dangerButtonStyle,{borderRadius:t.fieldRadius});
+export const disabledButtonStyle=presentation(original.disabledButtonStyle,{background:t.tint,color:t.muted,borderRadius:t.fieldRadius});
+export const labelStyle=presentation(original.labelStyle,{color:t.muted});
+export const labelVeryLightStyle=presentation(original.labelVeryLightStyle,{color:t.muted});
+export const valueStyle=presentation(original.valueStyle,{color:t.ink});
+export const headerStyle=presentation(original.headerStyle,{color:t.ink});
+export const subheaderStyle=presentation(original.subheaderStyle,{color:'#31394f'});

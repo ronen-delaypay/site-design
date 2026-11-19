@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/*
+ * Global theme tokens — kept in lockstep with src/lib/design-tokens.ts.
+ * Use var(--dp-*) anywhere CSS is preferred over inline styles.
+ */
+:root {
+  /* Surfaces */
+  --dp-bg: #0a1020;
+  --dp-bg-secondary: #141c33;
+  --dp-bg-tertiary: #1f2845;
+
+  /* Borders */
+  --dp-border: #27314d;
+  --dp-border-light: #1a2238;
+  --dp-border-dark: #3a466a;
+
+  /* Text */
+  --dp-text: #f8fafc;
+  --dp-text-secondary: #cbd5e1;
+  --dp-text-muted: #94a3b8;
+  --dp-text-light: #64748b;
+
+  /* Brand */
+  --dp-primary: #2563eb;
+  --dp-primary-light: #60a5fa;
+  --dp-primary-bg: rgba(59, 130, 246, 0.14);
+
+  /* Semantic */
+  --dp-success: #10b981;
+  --dp-warning: #f59e0b;
+  --dp-danger: #ef4444;
+  --dp-info: #06b6d4;
+
+  /* Radii */
+  --dp-radius-sm: 6px;
+  --dp-radius-md: 8px;
+  --dp-radius-lg: 12px;
+
+  /* Shadows */
+  --dp-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --dp-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --dp-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --dp-primary-glow: 0 0 0 4px rgba(59, 130, 246, 0.18);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(59, 130, 246, 0.08), transparent 70%),
+    var(--dp-bg);
+  background-attachment: fixed;
+  color: var(--dp-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01", "ss03";
+  letter-spacing: -0.005em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dp-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dp-border-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dp-text-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  color: var(--dp-text);
+}
+
+/* Native control styling on dark surfaces */
+input::placeholder,
+textarea::placeholder {
+  color: var(--dp-text-light);
+  opacity: 1;
+}
+
+/* Transitions for theme elements */
+.transition-colors {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* RTL support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* The portal must override alignment inherited from the admin root. */
+.dp-client-portal {
+  text-align: start;
+}
+
+.dp-client-portal :is(h1, h2, h3, h4, h5, h6, [role="heading"]) {
+  text-align: center;
+}
+
+.dp-client-portal input[type="file"] {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.dp-document-rubrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dp-case-action-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.dp-case-status-panel {
+  padding: 14px;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.dp-case-status-content {
+  min-width: 0;
+}
+
+.dp-case-status-heading {
+  display: grid;
+  grid-template-columns: minmax(18px, 1fr) auto minmax(18px, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  direction: ltr;
+}
+
+.dp-case-status-title {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.dp-case-status-icon {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.dp-case-status-description {
+  margin: 8px 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.dp-document-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  row-gap: 12px;
+}
+
+/* Share row heights across each desktop row, including wrapped translations.
+   The fallback above keeps actions at the bottom on older browsers. */
+@supports (grid-template-rows: subgrid) {
+  .dp-document-card {
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+}
+
+.dp-document-card-title {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+}
+
+.dp-document-card-title > h5 {
+  width: 100%;
+}
+
+.dp-document-card-status {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  /* Center the badge itself; reserve equal space on both sides. */
+  direction: ltr;
+}
+
+.dp-document-card-status > [role="status"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.dp-document-card-icon {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.dp-document-card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  min-height: 68px;
+}
+
+/* File and camera buttons sit inside picker wrappers. */
+.dp-document-card-actions button,
+.dp-document-card-actions input[type="file"] {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+}
+
+.dp-upload-or { text-align: center; font-weight: 600; margin-block: 10px; color: var(--dp-text-muted, #525068); }
+.dp-upload-file-choice { min-width: 0; width: 100%; }
+.dp-upload-file-names { overflow-wrap: anywhere; font-size: 12px; margin-block-start: 8px; }
+
+@media (max-width: 640px) {
+  .dp-document-rubrics {
+    grid-auto-rows: 1fr;
+  }
+
+  .dp-document-card {
+    grid-row: auto;
+    grid-template-rows: minmax(42px, auto) auto 1fr auto;
+  }
+}
+
+/* Free text follows ITS OWN language, not the page's.
+   The admin and the portal are RTL pages, but the text they show and collect
+   is written by customers, airlines, agents and the model — Hebrew, Arabic or
+   English. Inside an RTL container an English message was laid out
+   right-to-left (punctuation at the wrong end, right-aligned), and an English
+   reply typed into a textarea likewise. `unicode-bidi: plaintext` gives every
+   PARAGRAPH the direction of its own first strong character (what dir="auto"
+   does per element), and `text-align: start` then aligns each one to its own
+   side: Hebrew right-to-left, English left-to-right.
+   Scope: message/notes blocks (the app renders them with an inline
+   `white-space: pre-wrap|pre-line`) and free-text inputs. `:where()` keeps
+   the specificity at zero, so any explicit inline `textAlign` still wins. */
+:where(
+  [style*="white-space: pre-wrap"],
+  [style*="white-space:pre-wrap"],
+  [style*="white-space: pre-line"],
+  [style*="white-space:pre-line"],
+  textarea,
+  input:not([type]),
+  input[type="text"],
+  input[type="search"]
+) {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
+
+/* Email addresses, phone numbers and URLs are always left-to-right strings;
+   in an RTL page the bidi algorithm otherwise scrambles "+972-50…" and
+   "name@domain" as they are typed. */
+:where(input[type="email"], input[type="tel"], input[type="url"]) {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: right;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--dp-border);
+}
+
+th {
+  background: var(--dp-bg-secondary);
+  color: var(--dp-text-muted);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  color: var(--dp-text);
+  font-size: 14px;
+}
+
+tr:hover td {
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Accessible focus ring — soft glow rather than harsh outline */
+*:focus-visible {
+  outline: 2px solid var(--dp-primary);
+  outline-offset: 2px;
+  box-shadow: var(--dp-primary-glow);
+  border-radius: var(--dp-radius-sm);
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: var(--dp-text);
+}
+
+/* KPI tile — accent comes in via inline --kpi-accent so hover lifts the
+   card uniformly without React state and without losing the per-metric tint. */
+.dp-kpi {
+  background: var(--dp-bg-secondary);
+  border: 1px solid var(--dp-border);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.dp-kpi:hover {
+  border-color: var(--kpi-accent, var(--dp-border-dark));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--kpi-accent-soft, transparent);
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, var(--dp-bg-secondary) 0%, var(--dp-bg-tertiary) 100%);
+}
+
+.dp-kpi--hero {
+  padding: 24px 24px 22px;
+  border-radius: 20px;
+}
+
+/* HealthDot pulse for healthy state */
+.dp-health-dot {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-inline-end: 8px;
+}
+
+.dp-health-dot--ok::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--dp-success);
+  opacity: 0.6;
+  animation: dp-pulse 2s ease-in-out infinite;
+}
+
+/* Lightweight spinner for lazy-loaded panel placeholders */
+.dp-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  opacity: 0.6;
+  animation: dp-spin 0.7s linear infinite;
+}
+
+@keyframes dp-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dp-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Row hover for token-styled grid tables — replaces per-row JS hover
+   handlers in cases / logs / analytics / payments / clients pages. */
+.dp-row--hoverable {
+  transition: background 0.15s;
+}
+
+.dp-row--hoverable:hover {
+  background: var(--dp-bg-tertiary);
+}
+
+/* Subtle background accent for primary buttons on hover */
+.dp-btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.dp-btn-secondary:hover:not(:disabled) {
+  background: var(--dp-bg-tertiary);
+  border-color: var(--dp-border-dark);
+}
+
+.dp-btn-ghost:hover:not(:disabled) {
+  background: var(--dp-bg-secondary);
+}
+
+/* Shared admin navigation: six stable primary sections disclose the full
+   destination list without turning every route into a header-level chip. */
+.dp-admin-nav {
+  position: relative;
+  z-index: 50;
+  border-bottom: 1px solid var(--dp-border);
+  background: rgba(10, 16, 32, 0.98);
+  box-shadow: var(--dp-shadow-sm);
+}
+
+.dp-admin-nav__bar {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 24px;
+}
+
+.dp-admin-nav__brand {
+  flex: 0 0 auto;
+  color: var(--dp-text);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.dp-admin-nav__brand span {
+  color: var(--dp-primary-light);
+}
+
+.dp-admin-nav__nav {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dp-admin-nav__group {
+  position: relative;
+}
+
+.dp-admin-nav__group-trigger {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--dp-radius-md);
+  background: transparent;
+  color: var(--dp-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dp-admin-nav__group-trigger:hover,
+.dp-admin-nav__group-trigger[aria-expanded="true"] {
+  border-color: var(--dp-border);
+  background: var(--dp-bg-secondary);
+  color: var(--dp-text);
+}
+
+.dp-admin-nav__group.is-active > .dp-admin-nav__group-trigger {
+  color: var(--dp-primary-light);
+}
+
+.dp-admin-nav__group.is-active > .dp-admin-nav__group-trigger::after {
+  content: "";
+  position: absolute;
+  inset-inline: 10px;
+  bottom: 1px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--dp-primary-light);
+}
+
+.dp-admin-nav__chevron {
+  font-size: 10px;
+  transition: transform 0.15s ease;
+}
+
+.dp-admin-nav__group-trigger[aria-expanded="true"] .dp-admin-nav__chevron {
+  transform: rotate(180deg);
+}
+
+.dp-admin-nav__submenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-start: 0;
+  width: max-content;
+  min-width: 220px;
+  max-width: min(440px, calc(100vw - 32px));
+  padding: 8px;
+  border: 1px solid var(--dp-border-dark);
+  border-radius: var(--dp-radius-lg);
+  background: var(--dp-bg-secondary);
+  box-shadow: var(--dp-shadow-lg);
+}
+
+.dp-admin-nav__submenu ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dp-admin-nav__submenu li {
+  min-width: 0;
+}
+
+.dp-nav-link {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 7px 10px;
+  border-radius: var(--dp-radius-md);
+  border: 1px solid transparent;
+  color: var(--dp-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.dp-nav-link:hover {
+  background: var(--dp-bg-tertiary);
+  color: var(--dp-text);
+}
+
+.dp-nav-link.is-active {
+  border-color: var(--dp-primary);
+  background: var(--dp-primary-bg);
+  color: var(--dp-primary-light);
+  font-weight: 700;
+}
+
+.dp-admin-nav__utilities {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-inline-start: auto;
+  padding-inline-start: 14px;
+  border-inline-start: 1px solid var(--dp-border);
+}
+
+.dp-admin-nav__search {
+  width: clamp(190px, 18vw, 280px);
+}
+
+.dp-admin-nav__account-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dp-admin-nav__language {
+  min-width: 38px;
+  font-weight: 700;
+}
+
+.dp-admin-nav__logout {
+  color: var(--dp-danger) !important;
+}
+
+.dp-admin-nav :is(a, button, input):focus-visible {
+  outline: 2px solid var(--dp-primary-light);
+  outline-offset: 2px;
+}
+
+.dp-hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  margin-inline-start: auto;
+  padding: 9px;
+  border: 1px solid var(--dp-border);
+  border-radius: var(--dp-radius-md);
+  background: var(--dp-bg-secondary);
+  cursor: pointer;
+}
+
+.dp-hamburger span {
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--dp-text);
+}
+
+.dp-mobile-menu {
+  position: absolute;
+  top: 100%;
+  inset-inline: 0;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  padding: 12px;
+  border-top: 1px solid var(--dp-border);
+  border-bottom: 1px solid var(--dp-border);
+  background: var(--dp-bg);
+  box-shadow: var(--dp-shadow-lg);
+}
+
+/* QuickActions tile — per-action accent comes in via inline CSS variables
+   (--qa-bg, --qa-color, --qa-border) so hover doesn't need React state. */
+.dp-quick-action {
+  padding: 16px 12px;
+  border-radius: var(--dp-radius-lg);
+  background: var(--dp-bg-secondary);
+  border: 1px solid var(--dp-border);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.dp-quick-action:hover {
+  background: var(--qa-bg, var(--dp-bg-tertiary));
+  border-color: var(--qa-border, var(--dp-border-dark));
+  transform: translateY(-2px);
+}
+
+.dp-quick-action__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dp-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.dp-quick-action:hover .dp-quick-action__label {
+  color: var(--qa-color, var(--dp-text));
+}
+
+/* Animations used by UI primitives (Loading, Skeleton, Button loader) */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ----------------------------------------------------------------------
+   Mobile responsive layer
+   The admin app uses CSS-in-JS (inline styles) almost exclusively. To keep
+   that intact while still collapsing layouts on phones, these utilities
+   use !important to win the cascade against inline styles. Apply via
+   className alongside the existing inline style.
+   ---------------------------------------------------------------------- */
+
+/* Prevent any rogue overflow from leaking horizontal scroll to <body>. */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* fallback for browsers without clip (Safari < 16) */
+  overflow-x: clip; /* not hidden: hidden makes body a scroll container and breaks position:sticky */
+}
+
+/* Page shell — replace inline `padding: 32px` with this so we can shrink it. */
+.dp-page {
+  direction: rtl;
+  background: var(--dp-bg);
+  min-height: 100vh;
+  color: var(--dp-text);
+  padding: 32px;
+}
+
+/* Tables that use CSS grid rows with fixed pixel columns. Wrap them in this
+   so the grid keeps its pixel widths and the wrapper handles horizontal
+   scrolling instead of bleeding past the viewport. !important needed
+   because some shells set inline overflow:hidden. */
+.dp-table-scroll {
+  overflow-x: auto !important;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.dp-table-scroll > * {
+  min-width: max-content;
+}
+
+@media (max-width: 768px) {
+  .dp-page {
+    padding: 12px !important;
+  }
+
+  /* Collapse multi-column grids to a single column on phones. Wins against
+     inline grid styles thanks to !important. */
+  .dp-grid-2,
+  .dp-grid-3,
+  .dp-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  /* Stat KPI cards stay 2-up on phones — they're small and stacking
+     them 1-up wastes vertical space and pushes content below the fold. */
+  .dp-grid-stats {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Hero cards and sub-headers — tighten padding so 393px viewports breathe. */
+  .dp-hero {
+    padding: 16px !important;
+    gap: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Section card content padding shrink */
+  .dp-section {
+    padding: 12px !important;
+  }
+
+  /* Mixed Hebrew + English copy: force LTR text where the content is
+     primarily English so punctuation lands at the end of the line, not the
+     start. Apply via className when wrapping English-only paragraphs. */
+  .dp-ltr {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: isolate;
+  }
+}
+
+/* Slightly tighter at very small phones */
+@media (max-width: 480px) {
+  .dp-page {
+    padding: 8px !important;
+  }
+}
+
+/* Compact navigation becomes a disclosure drawer. The same semantic links and
+   permission boundaries are preserved; only their presentation changes. */
+@media (max-width: 1179px) {
+  .dp-admin-nav__bar {
+    min-height: 58px;
+    padding: 8px 14px;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__group-trigger {
+    width: 100%;
+    justify-content: space-between;
+    min-height: 44px;
+    padding-inline: 12px;
+    font-size: 14px;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__group.is-active > .dp-admin-nav__group-trigger::after {
+    inset-inline-start: 12px;
+    inset-inline-end: auto;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    height: auto;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__submenu {
+    position: static;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin: 2px 8px 8px;
+    border-color: var(--dp-border);
+    background: rgba(20, 28, 51, 0.72);
+    box-shadow: none;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__submenu ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dp-mobile-menu .dp-nav-link {
+    min-height: 42px;
+    white-space: normal;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__utilities {
+    align-items: stretch;
+    margin: 12px 0 0;
+    padding: 14px 0 0;
+    border-inline-start: 0;
+    border-top: 1px solid var(--dp-border);
+  }
+
+  .dp-mobile-menu .dp-admin-nav__search {
+    width: min(100%, 420px);
+    flex: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .dp-mobile-menu .dp-admin-nav__submenu ul {
+    grid-template-columns: 1fr;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__utilities {
+    flex-direction: column;
+  }
+
+  .dp-mobile-menu .dp-admin-nav__account-actions {
+    justify-content: space-between;
+  }
+}
+
+/* ----------------------------------------------------------------------
+   WhatsApp + Approvals two-column layouts
+   On phones convert the sidebar + main grid into a vertical stack so the
+   detail / chat panel is actually usable. The sidebar shows above and
+   shrinks; the chat / detail panel fills below.
+   ---------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .dp-split-shell {
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: calc(100vh - 56px);
+  }
+  .dp-split-sidebar {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    max-height: 40vh;
+    border-left: none !important;
+    border-bottom: 1px solid #E9EDEF;
+  }
+  .dp-split-main {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+  /* Generic grid split shell (e.g. ops/approvals using "300px 1fr"). */
+  .dp-split-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Chat bubble cap on phones — keep wide so messages don't wrap aggressively. */
+  .dp-chat-bubble {
+    max-width: 85% !important;
+  }
+}
+
+/* ----------------------------------------------------------------------
+   Customer-portal LIGHT theme scope
+   The admin app is dark (see :root above). The customer portal opts into a
+   light "AI-startup" blue theme. `.dp-client-portal` (set by
+   ClientPortalLayout) re-points the --dp-* vars to light values for
+   everything inside the portal, and gives the shared .dp-* component classes
+   (kpi tiles, quick actions, nav links, buttons, rows) light treatments.
+   Scoped selectors keep this 100% out of the admin.
+   ---------------------------------------------------------------------- */
+.dp-client-portal {
+  --dp-bg: #f6f8fb;
+  --dp-bg-secondary: #ffffff;
+  --dp-bg-tertiary: #eef2f7;
+  --dp-border: #e1e7f0;
+  --dp-border-light: #eef2f7;
+  --dp-border-dark: #cbd4e1;
+  --dp-text: #14151f;
+  --dp-text-secondary: #1e1d2d;
+  --dp-text-muted: #64748b;
+  --dp-text-light: #94a2b8;
+  --dp-primary: #177bc7;
+  --dp-primary-light: #3e97db;
+  --dp-primary-bg: rgba(23, 123, 199, 0.08);
+  --dp-success: #16a97a;
+  --dp-warning: #e8a317;
+  --dp-danger: #e5484d;
+  --dp-info: #177bc7;
+  --dp-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --dp-shadow-md: 0 4px 16px rgba(16, 24, 40, 0.08);
+  --dp-shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.12);
+  --dp-primary-glow: 0 0 0 4px rgba(23, 123, 199, 0.15);
+  color: var(--dp-text);
+}
+.dp-client-portal input::placeholder,
+.dp-client-portal textarea::placeholder { color: #94a2b8; }
+/* Light KPI tile + quick-action hover (override the dark gradients above) */
+.dp-client-portal .dp-kpi {
+  background: #ffffff;
+  border-color: #e1e7f0;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+.dp-client-portal .dp-kpi:hover {
+  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.10);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+}
+.dp-client-portal .dp-quick-action { background: #ffffff; border-color: #e1e7f0; }
+.dp-client-portal .dp-quick-action:hover { background: var(--qa-bg, #f6f8fb); }
+.dp-client-portal .dp-nav-link { color: #475569; }
+.dp-client-portal .dp-nav-link:hover { background: #eef2f7; }
+.dp-client-portal .dp-btn-secondary:hover:not(:disabled) { background: #eef2f7; border-color: #cbd4e1; }
+.dp-client-portal .dp-btn-ghost:hover:not(:disabled) { background: #eef2f7; }
+.dp-client-portal .dp-row--hoverable:hover { background: #f6f8fb; }
+.dp-client-portal th { background: #f6f8fb; color: #64748b; }
+.dp-client-portal td { color: #14151f; }
+.dp-client-portal tr:hover td { background: #f6f8fb; }
+
+/* Min-height-based dropdown / modal caps — keep within the viewport on
+   short phones in landscape. */
+.dp-clamp-vh {
+  max-height: min(420px, 60vh) !important;
+}
+
+/* Tap-target helper for small icon buttons. */
+.dp-tap {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  /* On phones, native form controls get iOS Safari's font-size: 16px to
+     prevent zoom-on-focus. Bigger tap surfaces help anyone with thumbs. */
+  .dp-page input:not([type="checkbox"]):not([type="radio"]),
+  .dp-page textarea,
+  .dp-page select {
+    font-size: 16px !important;
+    min-height: 40px;
+  }
+  /* Buttons that aren't already chips get a minimum height for thumbs. */
+  .dp-page button:not(.dp-chip):not(.dp-nav-link):not([data-size="sm"]) {
+    min-height: 36px;
+  }
+  /* Make sure tables wrapped in dp-table-scroll don't collapse to zero
+     when their grid template uses fractional units. */
+  .dp-table-scroll table,
+  .dp-table-scroll > div[style*="grid-template-columns"],
+  .dp-table-scroll > div[style*="gridTemplateColumns"] {
+    min-width: max-content;
+  }
+  /* Long monospace IDs / URLs would otherwise overflow the cell. Break
+     anywhere needed instead of pushing the layout sideways. */
+  .dp-page [style*="font-family: monospace"],
+  .dp-page [style*="fontFamily: \"monospace\""],
+  .dp-page code,
+  .dp-page pre {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+  /* Hero / page headers with title + actions should wrap on phones so
+     the action buttons sit below the heading instead of being shoved
+     off-screen. Targets the very common pattern of:
+       <div style={{ display: flex, justify-content: space-between, ...}}>
+         <h1/h2>...</h1/h2>
+         <button-or-actions/>
+       </div>
+  */
+  .dp-page > div[style*="space-between"],
+  .dp-page > section[style*="space-between"],
+  .dp-page > header[style*="space-between"],
+  .dp-page > main > div[style*="space-between"]:not(.dp-split-shell):not(.dp-split-grid) {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

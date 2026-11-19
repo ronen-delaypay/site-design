@@ -1,0 +1,903 @@
+{
+  "draftModules": [
+    {
+      "path": "preview-src/draft/BirthDateInput.tsx",
+      "sha256": "f3c2ce4c7267decdc7ce1f3ee6dfa2e86dd9138dcbffe2e6d3e8fc5d907279ac"
+    },
+    {
+      "path": "preview-src/draft/claim-details.ts",
+      "sha256": "76e5b2c7afce7b7f64d454202633f732f46309430397dfd72d1b7aa5aad24988"
+    },
+    {
+      "path": "preview-src/draft/ClaimDetailsStep.tsx",
+      "sha256": "f2aec60aa4f82594baff8f6694640590ef58e7c39d82a8b3a56f1561f51601c4"
+    },
+    {
+      "path": "preview-src/draft/ClaimDocumentsStep.tsx",
+      "sha256": "d77df0514a2e491a12c663c8644df00ad7cc05a41613dc4ca35853e20154b62d"
+    },
+    {
+      "path": "preview-src/draft/ClaimFlow.tsx",
+      "sha256": "5ff601b58686ebc0b8c3194c10bc9334f99b6bb9890a5635ae3ace70bdae60db"
+    },
+    {
+      "path": "preview-src/draft/ClaimIntake.tsx",
+      "sha256": "0232ca4b79dd71a818cc29a55fe7675608a6a226564b6276027c81ec5a533595"
+    },
+    {
+      "path": "preview-src/draft/ClaimProgressNote.tsx",
+      "sha256": "43f6a3f9a0c52fe11f34fd08b309bdcf4b34b95235f3c6d095f80db81bc87d5c"
+    },
+    {
+      "path": "preview-src/draft/ClaimStepper.tsx",
+      "sha256": "2ea33df0971f66deef5227620b4da4da4a26852889892ba10abce9fa5aa1ef6b"
+    },
+    {
+      "path": "preview-src/draft/Dashboard.tsx",
+      "sha256": "0369755372bd3c32201f68db75d239b8144989c4f05f7627c4507ccaeed7d39b"
+    },
+    {
+      "path": "preview-src/draft/document-rubric-state.ts",
+      "sha256": "ee21782f083ce30a6dbe87a3012ab9be1a36da59c831251ae81170c02702cc9a"
+    },
+    {
+      "path": "preview-src/draft/DocumentSlots.tsx",
+      "sha256": "6f0dee0a95c1a5327060ca9c745434e8a58b43522b5a9087c08a821009a3bf1c"
+    },
+    {
+      "path": "preview-src/draft/merge-scan.ts",
+      "sha256": "784dfb935de5287caeaac9ebcfcede67a539728be6336a4ea96391a3341afba4"
+    },
+    {
+      "path": "preview-src/draft/MissingDetailsDialog.tsx",
+      "sha256": "b5b20529d787e91883fb7a86af3e54d15f47206c84bcbd9e80b0b64d70237d66"
+    },
+    {
+      "path": "preview-src/draft/OcrReview.tsx",
+      "sha256": "c30ab99cba8a9d28633775c7be70cbe693a17af67b6a26cb8286cb91e6a3450f"
+    },
+    {
+      "path": "preview-src/draft/OcrReviewContext.ts",
+      "sha256": "1ac61c0fdd1bd560f10ffcf66bbf7c4a846d42f086dcf98366893e964e00d1c4"
+    },
+    {
+      "path": "preview-src/draft/passenger-users.ts",
+      "sha256": "c80cbbea7abb5486aad88f5d3d0a13bd58081b47dd6f4f6d5fd6b26db98771db"
+    },
+    {
+      "path": "preview-src/draft/PassengerListEditor.tsx",
+      "sha256": "721121dbe7ad0d6971c626592c0886c6aa866051c2a7d2a83e1069c55eb8d98a"
+    },
+    {
+      "path": "preview-src/draft/PassengerReminderDialog.tsx",
+      "sha256": "289805fab20c7a030cb0e4882b3a2a9d0eae5f261fac751328064376ec06ac97"
+    },
+    {
+      "path": "preview-src/draft/PassengerReview.tsx",
+      "sha256": "2569d2ba8312c7d892bce74264addf283ddfe38072e9805b3f62ca45ec20b4b9"
+    },
+    {
+      "path": "preview-src/draft/poa-display-copy.ts",
+      "sha256": "7a73ecf1dc5366a1bf69f0bd827d793013731be2bf6486ec950c381a554165c1"
+    },
+    {
+      "path": "preview-src/draft/POAWidget.tsx",
+      "sha256": "aa1fe9946bf716e5d425c12058931e545540fd4e4b120342d0fb670efcc83215"
+    },
+    {
+      "path": "preview-src/draft/PublicWebsite.tsx",
+      "sha256": "806f130134f3ad4ffb7e3aca65ba11221e565e879bda2d9169ad97fdf98e6634"
+    },
+    {
+      "path": "preview-src/draft/reimbursement-copy.ts",
+      "sha256": "f8d30be6dff398e2e64bf0c51bd5413efd27885e9923469e8a735b9e93245031"
+    },
+    {
+      "path": "preview-src/draft/ReimbursementDocumentTiles.tsx",
+      "sha256": "29a4d3b2486eeb8307b8100416337872cdd0d352f245e7603a8c133c062b239c"
+    },
+    {
+      "path": "preview-src/draft/ReimbursementTutorialPlaceholder.tsx",
+      "sha256": "54347834f3dac2dd0dee714a1bb8bacd85f4449fa75427f30ddce46b895cb4da"
+    },
+    {
+      "path": "preview-src/draft/scan-save.ts",
+      "sha256": "7c1167ab2525eca1e8f6c95f0af980ed36827961c8d4c1307a07facc38a8480d"
+    },
+    {
+      "path": "preview-src/draft/ScannedPassengerResult.tsx",
+      "sha256": "44196150153c765c4088e3a7984707b4cf6bffa02cf84339bd468efd26568bc2"
+    },
+    {
+      "path": "preview-src/draft/ScanResults.tsx",
+      "sha256": "132f895342970f549c756ae1a956c6ad65d86cff76f4b3bab2fc246964874de6"
+    },
+    {
+      "path": "preview-src/draft/SimpleDocumentUpload.tsx",
+      "sha256": "fc307694d01acddf92f275d6d8cf8fb2e6e42291b36907c2dc0fe015246fb313"
+    },
+    {
+      "path": "preview-src/draft/SmartClaimCapture.tsx",
+      "sha256": "b6642a90be602245f34b9e8770869889dfbf67ef5992e86697100e0ea3330b9f"
+    },
+    {
+      "path": "preview-src/draft/TutorialVideos.tsx",
+      "sha256": "0b1eb759f84803e983c5e35a2f11bffd7e072106ce8677de325f81ff0ca1b6d1"
+    },
+    {
+      "path": "preview-src/draft/UploadProgressPreview.tsx",
+      "sha256": "291a3e17cfa3206bfe6f9bbd305105c469de52d0d506e2a5fdb3b49b79d06f78"
+    },
+    {
+      "path": "preview-src/draft/WebsiteSocialLinks.tsx",
+      "sha256": "7a7637e7cd355bc0237a15c1fcd359eb47490f6b9948f828e2ee14445fed1ae6"
+    }
+  ],
+  "draftChanges": [
+    "First-stage multi-passenger roster with stable scan ownership",
+    "Named missing-detail dialogs and per-passenger OCR confirmations",
+    "Idempotent simulated customer records with guardian-managed minors",
+    "Recorded reimbursement branch with source questions and receipt/event uploads",
+    "Never-recovered baggage hides inapplicable days question; resolved errors clear",
+    "Direct typed birth dates preserve ISO values and original minor checks",
+    "Restored airline, airport and flight-number lookup controls",
+    "OCR-first intake wrapper",
+    "Flight details include editable booking reference and ticket number",
+    "Seven-stage navigation including scan and OCR confirmation",
+    "Two equal upload cards with aligned icon/title/status rows",
+    "Shared light surfaces (#F8FAFF) and consistent fields (#FCFDFF)",
+    "Editable post-upload OCR review with explicit confirmation before POA",
+    "Passenger reminder before POA",
+    "New passenger action exists only on the document upload screen; next claim page has no add action",
+    "Back navigation throughout the claim preserves inputs and updates the existing claim",
+    "Baggage loss skips duration and offers a missing PIR after verification",
+    "After verification, ask only for missing baggage-loss PIR or reimbursement receipts",
+    "Flight delay choices: 3–5 hours, 5–8 hours, over 8 hours",
+    "Receipts-only reimbursement stage with OCR confirmation, rescans and original-currency checkout totals",
+    "Named booking passengers are linked to stable roster IDs and saved with the booking fallback",
+    "Flight and passenger confirmations use Yes/No radio choices with incomplete-state notes",
+    "Primary POA view removes copy, manual status-check and resend actions; in-page EasyDo embedding requires vendor approval",
+    "Second motivational note after confirmation; saved corrections retained",
+    "Confirmation load/save guards and locked future stages",
+    "Compact centered homepage intro",
+    "Encouragement after successful document uploads and forward navigation",
+    "Preview-only XHR upload adapter using existing in-memory API fixtures",
+    "Localized reimbursement tutorial placeholder in both Help Centers; no coming-soon label or fake playback"
+  ],
+  "builtAt": "2026-11-19T12:27:43.679Z",
+  "deploymentId": "dpl_BMqagHvpbZQvEQy92zZBN3hddnDb",
+  "sourceCommit": "72e9ff5754b26f0c04e8e7e47c3f3c55d741770a",
+  "sourceRoot": "DelayPay production source snapshot",
+  "source": "Verified production deployment shared by delaypay.co.il and portal.delaypay.co.il",
+  "branch": "PORTAL_V2=true verified on live login; ?portal=legacy reviews the existing false branch",
+  "modules": [
+    {
+      "path": "src/app/client/account/page.tsx",
+      "sha256": "7c4f467a4d162d8d0ad51e0e51bcb8b8f3a21694c7c2aea299561f6862ae7414"
+    },
+    {
+      "path": "src/app/client/agent-signup/AgentSignupForm.tsx",
+      "sha256": "1ef9432f9bd81d63152ca277d8db7ff7414e9ce4c59cd254e1bffaaf7f1c64b6"
+    },
+    {
+      "path": "src/app/client/agent-signup/page.tsx",
+      "sha256": "9c0107635383b7a75e09e6043a58d4eda4866feeb9de9f2d9a8f96ae583d09d3"
+    },
+    {
+      "path": "src/app/client/agent/AgentRoleGate.tsx",
+      "sha256": "1d5fd978b2fb57aa8998926536692ffac2c49ab48c871b7d4b8707fca6ce68b3"
+    },
+    {
+      "path": "src/app/client/agent/layout.tsx",
+      "sha256": "40cc26e559a190ae9e0d1e3cc07aa261f2987b307d325d7ee0259ca1317fa3ea"
+    },
+    {
+      "path": "src/app/client/agent/page.tsx",
+      "sha256": "e9805f48a5750d0aa258ae17ea218e9ac3986bcc8d9ff4f120c15f3806fe7cc9"
+    },
+    {
+      "path": "src/app/client/agent/submit/page.tsx",
+      "sha256": "429e8741879512d7c105d90b548e44bff48bb4e67957bbb5f796bfc4b5b1edd4"
+    },
+    {
+      "path": "src/app/client/approved-design.css",
+      "sha256": "19adb6a1bd839c9b444a8aa69de8fd817db9452b0de6ee8c0adfcdd3659493ad"
+    },
+    {
+      "path": "src/app/client/cases/[caseId]/page.tsx",
+      "sha256": "76a292d24b92191a3085595179a99ec14c63f6de59223a4dfee8dbc0a9c05b10"
+    },
+    {
+      "path": "src/app/client/documents/[docId]/page.tsx",
+      "sha256": "d33f406452d27cdcb625098f2209dbb44851d116dcce550c6b4ddd26a75ada32"
+    },
+    {
+      "path": "src/app/client/forgot-password/page.tsx",
+      "sha256": "2e0c7639ea719bfddb67ca6fca84ae9eb2d25a7fc8064a748e930d5b744e5e99"
+    },
+    {
+      "path": "src/app/client/help/page.tsx",
+      "sha256": "be1f8cb1ae6ffbae99e8092140420bb9336bec72ec058103df546540ea5b6140"
+    },
+    {
+      "path": "src/app/client/layout-shell.tsx",
+      "sha256": "f6e2ef8f648f2aca2e9bd32b9b4eeef1359815cd2bb7967668d69df296ccaaa8"
+    },
+    {
+      "path": "src/app/client/login/page.tsx",
+      "sha256": "3ea8a59c92009e5f512dab010f59c91667be04fc6c8adde00318d12041791984"
+    },
+    {
+      "path": "src/app/client/new-claim/page.tsx",
+      "sha256": "9e945f7897f4cf3d9e32b6428ff5e27cd9f5518e8f4b03f1d552a6350c8e51dc"
+    },
+    {
+      "path": "src/app/client/notifications/page.tsx",
+      "sha256": "ff46fc972683ba40919822df6499a6a9bf5ec8301cdf97a969a9c6d5148f9315"
+    },
+    {
+      "path": "src/app/client/page.tsx",
+      "sha256": "49c9ee990a679efff612be3e884b134b861318e4021cd94565969eb47f690806"
+    },
+    {
+      "path": "src/app/client/payments/page.tsx",
+      "sha256": "bddc4d5c6b2c8706c9d0be20398ad3c662233109eeb93352e81a46041509b3d5"
+    },
+    {
+      "path": "src/app/client/poa-signed/page.tsx",
+      "sha256": "14049084742c08a2e7d1b2d8730721dcbefb703959ff6caac617fa38496edb82"
+    },
+    {
+      "path": "src/app/client/settings/gmail/error-reason.ts",
+      "sha256": "981693f6d8b64a2245db26ded57b06deddcce84471114dcc086d3357db3f2438"
+    },
+    {
+      "path": "src/app/client/settings/gmail/page.tsx",
+      "sha256": "818c1c9be4cad077b3aa11b0a111364132c6e80d5ace836cf55f83d0d23cec65"
+    },
+    {
+      "path": "src/app/client/verify-email/page.tsx",
+      "sha256": "59fcd7c5f4a44f772697303e484265931beeb3727dbd31f16ed3a783fef182b9"
+    },
+    {
+      "path": "src/app/client/verify-phone/page.tsx",
+      "sha256": "283541d3b008c85535b50708b3ae927d2b15b5999be7ea323bb07f5ff5e6c7a9"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "daa2ce5434a54683903a7e935ca00fbea71accf8167be917490768b6512e342d"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "a9e4cc998af9e741d33bc7e750b32c4c5b381d08f0333cc3936e49c21c360dc9"
+    },
+    {
+      "path": "src/app/site/[locale]/[section]/page.tsx",
+      "sha256": "660e50d9ce98085149d5f412aad7d3dcccfab8c2e6e5e9c2af8901c1e7b70f0d"
+    },
+    {
+      "path": "src/app/site/[locale]/legal/[document]/page.tsx",
+      "sha256": "065fdc76004e49250d7bed9f6d453978d6d01c8388958bd74d1047c68b3c2445"
+    },
+    {
+      "path": "src/app/site/[locale]/page.tsx",
+      "sha256": "71113c3a989e515842b7f5b7c66b29902321acb32cf9eec643004a8eb69c7cc4"
+    },
+    {
+      "path": "src/app/site/website.css",
+      "sha256": "35590049abdb87787447f3a10c6838a91abaa4d465d7c3bd62409ded49121ec6"
+    },
+    {
+      "path": "src/components/client/Accessibility.tsx",
+      "sha256": "dbcfe4d4e143fd38c8f8abd26f93e6f407b50cc6a2cc3bad01937bb0db654444"
+    },
+    {
+      "path": "src/components/client/AirlineRequestsStatus.tsx",
+      "sha256": "519ae699f6c76906df604ace80753471ccca96ce6a019cbd64000c134c25878d"
+    },
+    {
+      "path": "src/components/client/AirlineSearchSelect.tsx",
+      "sha256": "5340ae96065c61fd45ddaee4025cf9cdea48ede9537208768cf8e439b219e6e8"
+    },
+    {
+      "path": "src/components/client/AirportSearchSelect.tsx",
+      "sha256": "f823fb74b14b831ac97b5203b0fa085aee0764e582fc8ce1bb82d890080fc4c8"
+    },
+    {
+      "path": "src/components/client/Alert.tsx",
+      "sha256": "3749695e067f27a63649ccbf18a667e3cc3f634884fd1c891e5c2a42120b9091"
+    },
+    {
+      "path": "src/components/client/AsyncSearchSelect.tsx",
+      "sha256": "bf7180d11ca4ad9160ce3baa0f5508560cc874cb5eb78edd942c94af59c3c7d4"
+    },
+    {
+      "path": "src/components/client/Badge.tsx",
+      "sha256": "a91e1e6ad89f2c30bf004f43960aa6ffdb7d7b03f131e828ae179853bb2403d3"
+    },
+    {
+      "path": "src/components/client/Button.tsx",
+      "sha256": "566049a85e84acdd8658c5ede9b043743465a390586f297e95ad5b2cb2c4c4bf"
+    },
+    {
+      "path": "src/components/client/CameraUploadButton.tsx",
+      "sha256": "6bf9436aafdc99eecdbd84a359d6235dcd7d49d65846306bf1f7cd6f7f0ec264"
+    },
+    {
+      "path": "src/components/client/Card.tsx",
+      "sha256": "41d2ce195b5782b47c1c2b51cead0721322de2ca2f699550f11d5fb50b2b7c10"
+    },
+    {
+      "path": "src/components/client/CaseBookingDetailsForm.tsx",
+      "sha256": "8ea21abb7ddb63590f7d797218d609b34b31948794f1be32faf09d79c1d3e195"
+    },
+    {
+      "path": "src/components/client/CaseCompensation.tsx",
+      "sha256": "97358484120f9e6826f5c0709538b2ae3a245ddf21ca2dae3ed1214c5789ec86"
+    },
+    {
+      "path": "src/components/client/CaseMessages.tsx",
+      "sha256": "beb5eff8968268d869d7d70240ff4d43f88cf9f814fbe2b9e1c8b47a4c7aa98c"
+    },
+    {
+      "path": "src/components/client/CaseOutboundComms.tsx",
+      "sha256": "628948e84d9cb8dfdac972330c67e08b9f3ab6a19dad36dd7bcf152d4a78be9e"
+    },
+    {
+      "path": "src/components/client/CasePassengers.tsx",
+      "sha256": "65cea91bcab7d382889ef1db277595a2ce84c286a821ec70cf83e331c020a593"
+    },
+    {
+      "path": "src/components/client/CasesList.tsx",
+      "sha256": "8273d7393f60c8b21b52ce661fec8df3ccf5efd136061b17fbb44654c122a9e6"
+    },
+    {
+      "path": "src/components/client/ClaimDocumentsStep.tsx",
+      "sha256": "3e18de44bdae689bbc2e3b538c4a3ba34280a8e420773170fbd1db90b88459b6"
+    },
+    {
+      "path": "src/components/client/ClaimPayoutStep.tsx",
+      "sha256": "6844ef2fd261a6eeb070c8a47f00401015d875f52ae6f10772a0f390ccfccf66"
+    },
+    {
+      "path": "src/components/client/ClaimStepper.tsx",
+      "sha256": "ea7f1ecc3a147b50300dadc43f5afb2a9fa81999a1894d4f0e399a6605c982b9"
+    },
+    {
+      "path": "src/components/client/ClaimSubmittedNext.tsx",
+      "sha256": "0e3fa4cd2e84c1ca0e1b6a62b1804fa4de973e12daafcd8796985fd3ddc074aa"
+    },
+    {
+      "path": "src/components/client/ClientHeader.tsx",
+      "sha256": "245a0b51367d7ccb356bda5ac5987702787e2b14bc7c42028ce5a646ec0bb650"
+    },
+    {
+      "path": "src/components/client/ClientPortalLayout.tsx",
+      "sha256": "4000c15694264bfc6e9462c496542e32baa9e175fec458ec33cf209bf7f5251c"
+    },
+    {
+      "path": "src/components/client/CompensationCalculator.tsx",
+      "sha256": "aca2ec81b54f582fe28f43f82e42c9fbfde51fae0bfdba34f0b5b7d20273a889"
+    },
+    {
+      "path": "src/components/client/DocumentManager.tsx",
+      "sha256": "fd5170933b0451cdb7f9163c91ea94cc0613806ee142b6d0d19e3b4a8be53ded"
+    },
+    {
+      "path": "src/components/client/EngagementSection.tsx",
+      "sha256": "c06cb6658c0599c3dee19c2da8ff806bc475ecf3c43f807b69ccfe681fc6f512"
+    },
+    {
+      "path": "src/components/client/ErrorBoundary.tsx",
+      "sha256": "dd28d19be5a26d2b864d8f37d74942a992e6283fe21b0b6706e23fb50be18ef5"
+    },
+    {
+      "path": "src/components/client/EscalationStatus.tsx",
+      "sha256": "cab950709d460f71e6a615367ae886d2649bee019eb9c99bbd642b08002a8eed"
+    },
+    {
+      "path": "src/components/client/FileUploadButton.tsx",
+      "sha256": "e3f51ae311ba7389ff098a0bf6fbf3da592c98369281e4ab280565c9f2417140"
+    },
+    {
+      "path": "src/components/client/flight-check-result.ts",
+      "sha256": "955bc41f8543911f197427fbabc01a703b9d9b8e73474b84ad7cdea05b89fe59"
+    },
+    {
+      "path": "src/components/client/FlightChecker.tsx",
+      "sha256": "7998fd24073a6daa3ddc2230cb1851f2e948bb176209d34d84196d901bf1596f"
+    },
+    {
+      "path": "src/components/client/FlightNumberInput.tsx",
+      "sha256": "9ac1989a48192566da9b362e976a0bc0ddceae77e1af62de2abc2b5e0e1990e6"
+    },
+    {
+      "path": "src/components/client/FlightStatusWidget.tsx",
+      "sha256": "44a13d3dc0ab076aa807cbd07f127e5b9b27e9fcb8ab7255c191bc45b5fc06bb"
+    },
+    {
+      "path": "src/components/client/IaaFlightVerification.tsx",
+      "sha256": "57dd2c6bda8c779cf35a8513c0a773d166f6a1e1fcfd246667eddf1cab69e840"
+    },
+    {
+      "path": "src/components/client/IbanStatusCard.tsx",
+      "sha256": "ff1373688bc64d6f2451076e69e73117d6fe43917b8e390dfc2c4b499d514add"
+    },
+    {
+      "path": "src/components/client/Icon.tsx",
+      "sha256": "250824cb4f936d4d010b174c0fcb4aa06c5e27019398186bb53415824559639c"
+    },
+    {
+      "path": "src/components/client/index.ts",
+      "sha256": "42de7d3a63787b3e58ff9830ef2e9df076769eacd34cf9db9bbfa4308489b744"
+    },
+    {
+      "path": "src/components/client/Input.tsx",
+      "sha256": "881035b8d4daffce3412898d75988f87c361ef944b08926995b4ec7758a72dc1"
+    },
+    {
+      "path": "src/components/client/LoadingSpinner.tsx",
+      "sha256": "7125cd6970afe80d9ddd7e9c7360075dee19e0b4f9bb403061277e80ebabef25"
+    },
+    {
+      "path": "src/components/client/LoginMethodChoice.tsx",
+      "sha256": "3b8731e1635ee4c12ca754e92b9ebaac18c2612d3aaa8b7a5192e90f2b2a881e"
+    },
+    {
+      "path": "src/components/client/OnboardingChecklist.tsx",
+      "sha256": "84fa2ee4a7ca363c7577912dbdf7e4c797839440a7a698371acb9d493a9b9719"
+    },
+    {
+      "path": "src/components/client/Pagination.tsx",
+      "sha256": "015c9ff6a363649f6ac7dfa9a6d06aa01b492b4dd17c9eac680ce24102cd9b50"
+    },
+    {
+      "path": "src/components/client/PoaReturnPage.tsx",
+      "sha256": "a47808b3381f8287564f5f8cf77dc66e2784e6a417c024529542682a54f63122"
+    },
+    {
+      "path": "src/components/client/POASignedDocumentActions.tsx",
+      "sha256": "b2bb4ca3b258bebaa9a4e88b84ff36d287fd92b096a899099b31caf243c65662"
+    },
+    {
+      "path": "src/components/client/PoaSignerDetailsForm.tsx",
+      "sha256": "48751052eee04f0708f5a5687add77a1a51b8ea13206d3390392ea640e6bc7d7"
+    },
+    {
+      "path": "src/components/client/POASigningModal.tsx",
+      "sha256": "177a95e6aab8b89a00942cc68fcc6464e80ddbcb51318bd96ea6b011218d48e5"
+    },
+    {
+      "path": "src/components/client/ProgressBar.tsx",
+      "sha256": "e015d40aca5c54159098c7b6a98a002d32927b6693d0688880a0ab83ee9c651f"
+    },
+    {
+      "path": "src/components/client/QuickClaimForm.tsx",
+      "sha256": "0cdf679466fc7cd1f3d575c053626739fd40a1b13373e1155522eba6c18ba2b3"
+    },
+    {
+      "path": "src/components/client/Skeleton.tsx",
+      "sha256": "14820d054f97ff6bb6c520044562a8c4dd54763ece495334fc75fa149f9b0287"
+    },
+    {
+      "path": "src/components/client/SkeletonLoader.tsx",
+      "sha256": "25c44959e3c53f9c9a279b1093195c0b60cf4ae07c88f3311f8e022821be0d8e"
+    },
+    {
+      "path": "src/components/client/SmartClaimCapture.tsx",
+      "sha256": "c595b95ecfe3234036d620d24afd495b9d981cd6a2dbd871361596158e9eb8bc"
+    },
+    {
+      "path": "src/components/client/StatsSummary.tsx",
+      "sha256": "8d14742a5e8a80c85ecc734846e8062982710ab8a4f0939c6d3384fc87bd7aa2"
+    },
+    {
+      "path": "src/components/client/v2/CaseProgressList.tsx",
+      "sha256": "b6c2d38411a90b6b201d8d57c90d1115dd757db56d8adeeb3c707a937154cc5a"
+    },
+    {
+      "path": "src/components/client/v2/ClaimDetailsStep.tsx",
+      "sha256": "4c8599dc1a5ff2e17fc3c0318378d3397373f3c563c8261ebe3695e70226e043"
+    },
+    {
+      "path": "src/components/client/v2/ClaimIntentSync.tsx",
+      "sha256": "2b93e4ec6089ade74e34decaea71fa34503db5a4ef55b0f0e7f5a7cc8ce5d802"
+    },
+    {
+      "path": "src/components/client/v2/PortalChrome.tsx",
+      "sha256": "064573cd56af64af870dc70c719e1ad9a002884ad65ffa081aa558c375c923b6"
+    },
+    {
+      "path": "src/components/client/v2/PortalHeaderV2.tsx",
+      "sha256": "2c9d3d017c69a249e7a5049f53a73c3e85ad5193070cb6fba4607ecf698adbb9"
+    },
+    {
+      "path": "src/components/client/v2/PortalLanguageSelect.tsx",
+      "sha256": "4317f97727ebcd2fa4742f250c162110c2ae40aa2241851f52f834fbe37ab3d1"
+    },
+    {
+      "path": "src/components/client/v2/tutorial-videos.css",
+      "sha256": "8cf8ca6ad52b1a500e9a1119d014134762d4f4c4aee788698447a0ed4a110a44"
+    },
+    {
+      "path": "src/components/client/VerifyEmailPrompt.tsx",
+      "sha256": "e292f38191655aa8f8eb62702cab8ca96f25f40911356ebf6cc85c0d525c1914"
+    },
+    {
+      "path": "src/components/client/WhatsAppLogo.tsx",
+      "sha256": "dc07bdfc8949acc6050b9ecebc58d415d952b39c327c013b6129156066886338"
+    },
+    {
+      "path": "src/components/client/WhatsAppSupport.tsx",
+      "sha256": "bb6ed4616086c0df61e3f2b3a03148e13f99cabd2b44f9a520a10674333df68a"
+    },
+    {
+      "path": "src/components/common/whatsapp-contact.ts",
+      "sha256": "e65f62dfc73300499945ed0f0d11ec65b0d6371d1bee936afeaf26a8df3172a3"
+    },
+    {
+      "path": "src/components/common/WhatsAppFloat.tsx",
+      "sha256": "61eae0bd176e97cf679b119196e67eae54fb8cd06129c9990e1bb4a557d4e964"
+    },
+    {
+      "path": "src/components/common/WhatsAppLink.tsx",
+      "sha256": "d45dcd0d0a6f628c6a7036a29cf135f56a51712d2e1efc412b3f4a3bb9f0f243"
+    },
+    {
+      "path": "src/components/marketing/AnalyticsProvider.tsx",
+      "sha256": "8dc1f8c8fc5b7adaaac03444cc32aa553173cb03d64ea00ba4973e034f60375e"
+    },
+    {
+      "path": "src/components/marketing/CookieConsentBanner.tsx",
+      "sha256": "611bc2b395f821faffbc5497f2fc70c12c1a330b8d03928cd849708d44e18915"
+    },
+    {
+      "path": "src/components/website/CompensationCalculator.tsx",
+      "sha256": "95c4d9cc6b2711030e2b2c1da6220262b86e71f9968d140f1c0ee96384d78a54"
+    },
+    {
+      "path": "src/hooks/useLocale.ts",
+      "sha256": "8d024da0a287c8dbfd158b280551520a53c914be3a1725c72b3bd42b22c3302a"
+    },
+    {
+      "path": "src/hooks/useNotificationsSSE.ts",
+      "sha256": "0e48516038a4cfc70900cdae6aa154658e9640468adb58d8037d92e237cec9ca"
+    },
+    {
+      "path": "src/lib/case-model.ts",
+      "sha256": "321b65e94004a07daae48e84f3137666eeb44d8738752906cab441664623863e"
+    },
+    {
+      "path": "src/lib/claims/escalation-customer-labels.ts",
+      "sha256": "4e84e0ff29ec831774f47ca17d925b7cd6291e83943fc2e33796b966e03734f1"
+    },
+    {
+      "path": "src/lib/claims/iban-policy.ts",
+      "sha256": "a9ad3ffe50937fa7b13d943d1e836366929f13838fb773a25c894b1b9b813bb6"
+    },
+    {
+      "path": "src/lib/claims/passenger-age.ts",
+      "sha256": "a37c6c8f2d452a872e472607503b32847cae549626efb4552ea2f20766534871"
+    },
+    {
+      "path": "src/lib/claims/passenger-documents.ts",
+      "sha256": "4ad9fa11fa6111d5edf1699e1ed53072939bb396ae8f8ff9e703340dbc68b951"
+    },
+    {
+      "path": "src/lib/claims/utils.ts",
+      "sha256": "cfbb793dcf745349c8176d7aeb03279ad464b3d77daac8689740e72b9d0e81a6"
+    },
+    {
+      "path": "src/lib/client/airports-catalog.ts",
+      "sha256": "69df29202d000b16d62a87eb72baabb3789d8730080533cc7bea018f68221a1a"
+    },
+    {
+      "path": "src/lib/client/analytics.ts",
+      "sha256": "746e265d0337372a57ffcc9294e4bc97ea971f68290e4f831392ad40845d9c14"
+    },
+    {
+      "path": "src/lib/client/booking-details.ts",
+      "sha256": "514554a9ac1c3d606c88b6bde2f07ed8a9049f4fbb103b327748b8c5bc813d80"
+    },
+    {
+      "path": "src/lib/client/case-editability.ts",
+      "sha256": "aac9b3c3d18a657e9d98c639f6f3ce13a3978c6562dea62714dc9e9004b7f660"
+    },
+    {
+      "path": "src/lib/client/case-stage.ts",
+      "sha256": "9a1737b148a4945f3068b6f2bd8c5b74d6cfb35e8381ed90ebb3177023122315"
+    },
+    {
+      "path": "src/lib/client/claim-details.ts",
+      "sha256": "a3b57ae73226893a47c6332cccf70c7558280f7ffc7af4d96eacde5b997d1cd8"
+    },
+    {
+      "path": "src/lib/client/claim-flow.ts",
+      "sha256": "1cd6809b021ec979b65c17a1c421ef152525c0dbb118973f3f3d6432385195c4"
+    },
+    {
+      "path": "src/lib/client/contact-verify-prompt.ts",
+      "sha256": "2bf014c8d1851c7924a5526559f7473660578c2d86f9b8f58aac2eed810f820d"
+    },
+    {
+      "path": "src/lib/client/cookie-consent.ts",
+      "sha256": "364012f8719222b2298a4c1028ff1e0793f59de726d57e1691cb7bc3227ec2e1"
+    },
+    {
+      "path": "src/lib/client/cookie-scope.ts",
+      "sha256": "a2f7200d2c94ff37e8082d94e3269ad81356a8b01051d7e8b5ee8ba122a9db84"
+    },
+    {
+      "path": "src/lib/client/document-rubric-state.ts",
+      "sha256": "ee21782f083ce30a6dbe87a3012ab9be1a36da59c831251ae81170c02702cc9a"
+    },
+    {
+      "path": "src/lib/client/document-upload-failure.ts",
+      "sha256": "927a7bdb725f5cdc3e57155f44d78959b2b303602521076b6e213652324878c3"
+    },
+    {
+      "path": "src/lib/client/form-validation.ts",
+      "sha256": "0c561b7f73d101285ae8b8b991f685d38deac75c69e6401c4a4f07c7bbedee35"
+    },
+    {
+      "path": "src/lib/client/funnel-events.ts",
+      "sha256": "9f9708e6e6363a9e9e7a234fe7d74e274d990244535e48f585ddc555d6f4959d"
+    },
+    {
+      "path": "src/lib/client/iban-status.ts",
+      "sha256": "c8751e27c89ccba74e08737436af81c5ea91718f11806b9b121d34fbd35dda71"
+    },
+    {
+      "path": "src/lib/client/keep-signed-in-report.ts",
+      "sha256": "7614644c92e22d528eac7b48187d889a0cf6c10ed9145da47e22e8ebeb7e4392"
+    },
+    {
+      "path": "src/lib/client/keep-signed-in.ts",
+      "sha256": "f98bd8de7cecf0e6641b7a9cd1f351e8d7fece2c0fb357a2c844bcfb2bab0a6f"
+    },
+    {
+      "path": "src/lib/client/login-errors.ts",
+      "sha256": "e32c0cb9c903ec2bdd67222dc00655f228813e95e6355d381390bbec97839d01"
+    },
+    {
+      "path": "src/lib/client/login-target.ts",
+      "sha256": "c4c6d2e27afe1fca64bab92a5d2a319124eee5de942241289ca27ed098a6044d"
+    },
+    {
+      "path": "src/lib/client/meta-pixel.ts",
+      "sha256": "aa91cfa1e8dad36a076827f7cebb8e069004249ce280661c626b5c6d2052fba1"
+    },
+    {
+      "path": "src/lib/client/pagination.ts",
+      "sha256": "0890a485f966192c8864207d6f76824f014f3f4edbdd7f0b66e52d387c8394cc"
+    },
+    {
+      "path": "src/lib/client/poa-conflict.ts",
+      "sha256": "402f61d9480edaa086be1833c572759530921e7c716c2963223b0d308e296386"
+    },
+    {
+      "path": "src/lib/client/poa-native-input.ts",
+      "sha256": "3ae5bce9b7303ac3aeaa5429ef92a004b014ac35a860de442ca8f23298c618e3"
+    },
+    {
+      "path": "src/lib/client/poa-return-context.ts",
+      "sha256": "0f5981b0876ff6c27c2c96f277741ee1e335cf6cc35680752fe7698ebe2e4fbe"
+    },
+    {
+      "path": "src/lib/client/poa-signer-details.ts",
+      "sha256": "b2b84833a4df3d956bbe18ae1a202aca450539d5ab4b2360f92eccd35d881be4"
+    },
+    {
+      "path": "src/lib/client/poa-status-refresh.ts",
+      "sha256": "0f5be1b5ca0433889e1cd2995b92c0bfda2a146fb57fca4edd88425c38b930ca"
+    },
+    {
+      "path": "src/lib/client/portal-events.ts",
+      "sha256": "99fd120cbc35b5f92df0b299af45cffbcccd24f724ff75b03cac570d2b471879"
+    },
+    {
+      "path": "src/lib/client/portal-flags.ts",
+      "sha256": "f2bb9fe1af216dcd25d76c3e808096e81ea7afba4a9d70a9bed7399f2d2c9c1b"
+    },
+    {
+      "path": "src/lib/client/portal-header-routes.ts",
+      "sha256": "eb911660c53033ce69a68afa0d6c6bc5dd00da0555ac7c3cc90d878b2be64785"
+    },
+    {
+      "path": "src/lib/client/portal-public-paths.ts",
+      "sha256": "e4ecf334d9972dbf6a03b887b8b21dd54ca8dad3e4f909de1904e7d88196e711"
+    },
+    {
+      "path": "src/lib/client/portal-theme.ts",
+      "sha256": "613cec32d21352fdf2393d65a24d2440dafd07ceb005f06b0b3fb028dedf80e0"
+    },
+    {
+      "path": "src/lib/client/portal-url.ts",
+      "sha256": "f1a67a58d744dfbaa1950279616202e0f3d61791bb14f6b8abb8a7892d06df15"
+    },
+    {
+      "path": "src/lib/client/quick-claim-error.ts",
+      "sha256": "ca01ba37517871e5c9b7955078e7bc2c968efc9fc73b87c1f63c2dc0b7dc2168"
+    },
+    {
+      "path": "src/lib/client/redirect-with-params.ts",
+      "sha256": "34625dfc0645018b6d0f089ae42197ded2e67327b7588b863a25bae4551485ab"
+    },
+    {
+      "path": "src/lib/client/save-payout.ts",
+      "sha256": "c47f71a11edf92b43f3f8227eeb9a9b1050c13f1c908b8c6220c0a17b8dc43ba"
+    },
+    {
+      "path": "src/lib/client/session-cookie.ts",
+      "sha256": "d17082cbbac501c123c6af060401bda58c267baf4dbe0b485a9e4bf57d5f389e"
+    },
+    {
+      "path": "src/lib/client/tracking-url.ts",
+      "sha256": "2f3a92660eb89904c9c2d6eea1fa88e2263a963355a97a4bdedc69abb154dcd3"
+    },
+    {
+      "path": "src/lib/client/tutorial-video-content.ts",
+      "sha256": "1016ee6bd145722667e09ec0b15f02fe90ce9544b7bf109b58c009543cb339bb"
+    },
+    {
+      "path": "src/lib/client/upload-prep.ts",
+      "sha256": "da17484f21a81e5fcc5a359fbbe8718eccfcff27e34fd81c5c345d8af042924f"
+    },
+    {
+      "path": "src/lib/client/validate-selected-documents.ts",
+      "sha256": "09730b42bfd4cf555a7740ff7368074a5f1918bd1415448fbd2bde5fd2cebb6f"
+    },
+    {
+      "path": "src/lib/compensation-calculator.ts",
+      "sha256": "69fbf4138e47301a01a9ba0915be14700225d2839e021128c4392fbbebdf2bd1"
+    },
+    {
+      "path": "src/lib/compensation/disclaimer.ts",
+      "sha256": "e437440d3cde77b971f34c1ff960982f7c923db73728afc0a6098d58221f5054"
+    },
+    {
+      "path": "src/lib/compensation/eu261-constants.ts",
+      "sha256": "0756bbfe8357862b148c38460cb747e8df5eb60189077bac10a6222d9fc04b14"
+    },
+    {
+      "path": "src/lib/compensation/eu261-eligibility.ts",
+      "sha256": "c21a40eed4f453421023cd3d9d978e7fecc56d5c6754e5aaea67a2286650374d"
+    },
+    {
+      "path": "src/lib/compensation/fx-rate.ts",
+      "sha256": "a00482f2e6453ec871e720d1626fd6a605f5a0af29fed130731fe06ba8da174c"
+    },
+    {
+      "path": "src/lib/compensation/il-aviation-exempt-dates.ts",
+      "sha256": "207544a524baa3f8b1ae197817fddfaaac92e0f159eace780caa09e3c151d198"
+    },
+    {
+      "path": "src/lib/compensation/il-aviation-law.ts",
+      "sha256": "75feb2e10c903289fb1328852d5f5f39ff347a0dc5ce125b64010f316575abf0"
+    },
+    {
+      "path": "src/lib/config.ts",
+      "sha256": "ad1d1e97462a6e3bda516ecd8720c2f329719798c1319a94ac22c5b3484ed7ef"
+    },
+    {
+      "path": "src/lib/constants/document-upload.ts",
+      "sha256": "0e925ab115006d1db9189c32d824c553ce2dd4487112380f36c4f770d6414567"
+    },
+    {
+      "path": "src/lib/e2e/auth.ts",
+      "sha256": "96945df1287dfe069d28cf6bcc7dab205ffef6ff50938e2bf55dd03da242bdf1"
+    },
+    {
+      "path": "src/lib/easydo-signing-validation.ts",
+      "sha256": "60bf5ce0b35bc85536fc194c56b38bcfdca9f29294185eccf39d1d0cb72fec3e"
+    },
+    {
+      "path": "src/lib/i18n/dictionary.ts",
+      "sha256": "cf074bb478258ab0881006ad67e87ea89f196c8811a271009971b62618191452"
+    },
+    {
+      "path": "src/lib/i18n/index.ts",
+      "sha256": "ebd9f20812c480feb22224c7d1d7c54197b783a348502091a765dc35050778a4"
+    },
+    {
+      "path": "src/lib/i18n/lang-preference.ts",
+      "sha256": "57fa33a3f73ad93d8ff207faf534c1649a8f7065aa115aacc377dd0fd9bbe86e"
+    },
+    {
+      "path": "src/lib/i18n/locale.ts",
+      "sha256": "34cf59740b5a3a1068bc465667d8ee0fa4f888cedf28d7a39fa6939c5976738e"
+    },
+    {
+      "path": "src/lib/i18n/translate.ts",
+      "sha256": "750d9f646ab8bc65f90a0d0fb50cf1039296ac84f5830ec0a4b8290c2690aa36"
+    },
+    {
+      "path": "src/lib/logger.ts",
+      "sha256": "15482c73788ce884e816cb974668f27ba790a469397af413f29c198756c86985"
+    },
+    {
+      "path": "src/lib/marketing/attribution.ts",
+      "sha256": "de16dd1c6481403f7d8abbff26e91a871a00254c8c2b1bf23aab587115804bb9"
+    },
+    {
+      "path": "src/lib/marketing/consent.ts",
+      "sha256": "b2f32eeee4000f97483114df2f8b98b4bcc92ab06af23c2e3490e0c61881c45d"
+    },
+    {
+      "path": "src/lib/marketing/registration-event.ts",
+      "sha256": "db9185b7d1c50df52679386b1e41dd822d9c1928b27aa7175b9bcc4b89caa5f5"
+    },
+    {
+      "path": "src/lib/marketing/whatsapp-ref-tag.ts",
+      "sha256": "9ab5773f55d49c2f5ec97a15664fb68320ca74947445ff42f4e76a2f89fa001b"
+    },
+    {
+      "path": "src/lib/ocr/eu261-compensation.ts",
+      "sha256": "373aba199ded31b30a9a7fda21d679639e29abc32f9efef8bc93e0942cb5cc44"
+    },
+    {
+      "path": "src/lib/ocr/ocr-document-entries.ts",
+      "sha256": "8a77812b6bc0b5fd8aaec371e89671994090797a21d32e1cae0956eff65b189f"
+    },
+    {
+      "path": "src/lib/payments/service-fee-rate.ts",
+      "sha256": "51537f906934e9247084d2e17dac6745d3241c84073f3d91f987852cb39e2fbd"
+    },
+    {
+      "path": "src/lib/phone/normalize.ts",
+      "sha256": "2bdbbe6caa480ffeb1a3fb93e234900db2c334a2e131be211f9cc833e216c460"
+    },
+    {
+      "path": "src/lib/text/normalize-digits.ts",
+      "sha256": "8b7f3077a5e6cbba125ab1a76330784e554d77dd68d78cb2fe87874d7dcc625d"
+    },
+    {
+      "path": "src/lib/validation/contact.ts",
+      "sha256": "f8831ce90e837c071e9a9bc4b7c509ca0c76d3bd9f0b42d087fe3baf9c849d10"
+    },
+    {
+      "path": "src/lib/validation/israeli-id.ts",
+      "sha256": "cdd129cc22852dec3a2a7e261c04eeb5895f2f8280c3ee07ff4d21c331a59a08"
+    },
+    {
+      "path": "src/lib/website/calculator-content.ts",
+      "sha256": "2f30159c892cddf0ad3a3403b09cf88e6168409da1c6359d0533568b25fa9d01"
+    },
+    {
+      "path": "src/lib/website/calculator.ts",
+      "sha256": "cf70853aa7c86de30e18f064af116b4138544ab541a320262032d771daf2d95b"
+    },
+    {
+      "path": "src/lib/website/content.ts",
+      "sha256": "549454b68d66323e5eeaa9682efd4f01122c5faee7cacfec0d1923ead21cb55b"
+    },
+    {
+      "path": "src/lib/website/copy.ts",
+      "sha256": "ba5570d377dc569daa7b445bdafa753a8293d9263c119296b783bad3cf056c8f"
+    },
+    {
+      "path": "src/lib/website/currency-codes.json",
+      "sha256": "98b0cade4932d3872f29e88476011a7736de0b20c57e0359362ce4642701ec58"
+    },
+    {
+      "path": "src/lib/website/estimated-expenses.ts",
+      "sha256": "94541dbaf39df67f64d32670dd315ae4855effd0c0f1bcb9c0981948c4f3c672"
+    },
+    {
+      "path": "src/lib/website/legal-content.ts",
+      "sha256": "25f657c5b1891ac10c70fb6e4d5ce2836ea0c8b61017ce49c9593b72d8d5da9a"
+    },
+    {
+      "path": "src/lib/website/paths.ts",
+      "sha256": "29632a8748f3289e885655754811cfe813a81e7add968501b6d9e236fb744d29"
+    },
+    {
+      "path": "src/lib/zoho/airline-codes.ts",
+      "sha256": "1528be151c9c2afafcb4023b607be715b5263c6694ad194341c9f402b52048c7"
+    },
+    {
+      "path": "src/lib/zoho/field-validation.ts",
+      "sha256": "d55e02c92850ffe02e0a159bacbcfaef4dd40c62bd4db5850bb36dce445b70c2"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+/* Proposed blue-gray wizard surfaces, retaining the shared airplane canvas. */
+body.preview-redesign .source-portal [data-testid="claim-flow"] > .dp-flow-stage-panel { background: var(--dp-paper) !important; border: 1px solid var(--dp-line); box-shadow: 0 12px 36px -26px #3b507e45; }
+body.preview-redesign .draft-six-steps { background: var(--dp-paper); border-color: var(--dp-line); }
+body.preview-redesign .source-portal [data-testid="claim-documents-step"] .dp-doc-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 24px; align-items: start; }
+body.preview-redesign .source-portal [data-testid="claim-documents-step"] button[data-testid^="claim-doc-"]:not([data-testid^="claim-doc-camera-"]) { display: grid !important; grid-template-rows: 32px 64px 26px; align-content: center; justify-items: center; gap: 10px !important; box-sizing: border-box; width: 100%; height: 208px; min-height: 208px; padding: 24px 30px !important; border-radius: 16px !important; background: var(--dp-field); }
+body.preview-redesign .source-portal [data-testid="claim-documents-step"] button[data-testid^="claim-doc-"][aria-pressed="true"] { background: var(--dp-tint) !important; border: 1.5px solid #5a88dc !important; }
+body.preview-redesign .source-portal [data-testid="claim-documents-step"] button[data-testid^="claim-doc-"] > span:nth-child(2) { display: flex; align-items: center; justify-content: center; height: 64px; max-width: 28ch; font-size: 18px; line-height: 1.4; }
+body.preview-redesign .source-portal [data-testid="claim-documents-step"] button[data-testid^="claim-doc-"] > span:last-child { align-self: center; }
+body.preview-redesign .source-portal [data-testid="claim-flow-upload-success"] { padding: 18px 20px; margin-top: 24px !important; border: 1px solid #d6e3ef; border-radius: 12px; background: var(--dp-paper); }
+body.preview-redesign .dp-flow-actions { padding-top: 24px; border-top: 1px solid #d1deed; }
+.dp-ocr-review > header { margin-bottom: 28px; }
+body.preview-redesign .dp-ocr-review > header h3 { margin: 0; text-align: center; font-size: 28px !important; }
+body.preview-redesign .dp-ocr-review > header p { max-width: 65ch; margin: 10px auto 0; text-align: center; font-size: 16px !important; line-height: 1.7; color: #526784; }
+.dp-ocr-review-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 24px; }
+.dp-ocr-review-fields > label { display: grid; align-content: start; gap: 8px; min-width: 0; text-align: start; }
+.dp-ocr-review-fields > label > span { font-size: 14px; font-weight: 550; }
+.dp-ocr-review-fields small { color: #855a05; font-size: 13px; }
+.dp-ocr-review-confirm { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 28px 0 0; padding: 18px 20px; border: 1px solid #b7cce9; border-radius: 12px; background: var(--dp-tint); text-align: start; font-weight: 500; line-height: 1.6; }
+.dp-ocr-review-confirm legend { grid-column: 1 / -1; padding: 0 0 4px; font-weight: 650; }
+.dp-ocr-review-confirm > label { display: flex; align-items: flex-start; gap: 9px; min-height: 44px; padding: 10px 12px; border: 1px solid #d1deed; border-radius: 10px; background: var(--dp-field); cursor: pointer; }
+.dp-ocr-review-confirm input { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 2px; accent-color: #2f6feb; }
+.dp-ocr-review-confirm small { grid-column: 1 / -1; color: #855a05; font-size: 13px; }
+.dp-passenger-confirm { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin: 20px 0 0; padding: 14px 16px; border: 1px solid #d1deed; border-radius: 12px; background: var(--dp-tint); }
+.dp-passenger-confirm legend { grid-column: 1 / -1; padding: 0 0 3px; font-size: 14px; font-weight: 650; }
+.dp-passenger-confirm > label { display: flex; align-items: flex-start; gap: 9px; min-height: 42px; padding: 9px 10px; border: 1px solid #d1deed; border-radius: 9px; background: var(--dp-field); font-size: 13px; line-height: 1.5; cursor: pointer; }
+.dp-passenger-confirm input { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 1px; accent-color: #2f6feb; }
+.dp-passenger-confirm small { grid-column: 1 / -1; color: #855a05; font-size: 13px; line-height: 1.5; }
+@media(max-width:900px) { body.preview-redesign .draft-six-steps .dp-step-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } }
+@media(max-width:640px) { body.preview-redesign .source-portal [data-testid="claim-documents-step"] .dp-doc-grid, .dp-ocr-review-fields, .dp-ocr-review-confirm { grid-template-columns: minmax(0,1fr) !important; } body.preview-redesign .source-portal [data-testid="claim-documents-step"] .dp-doc-grid { gap: 18px; } body.preview-redesign .dp-ocr-review > header h3 { font-size: 24px !important; } .dp-ocr-review-confirm { padding: 16px; } }
+
+body.preview-redesign .source-portal [data-testid="claim-documents-step"] button[data-testid^="claim-doc-camera-"] { min-height: 44px !important; height: 44px !important; padding: 10px 16px !important; }
+@media(max-width:640px) { body.preview-redesign .source-portal [data-testid="claim-documents-step"] button[data-testid^="claim-doc-"] > span:nth-child(2) { font-size: 16px; } }
+
+body.preview-redesign .source-portal .dp-ocr-review-fields input { border: 1px solid var(--dp-line-strong) !important; border-radius: 12px; background: var(--dp-field) !important; box-shadow: none; }
+body.preview-redesign .source-portal .dp-ocr-review-fields input:focus-visible { border-color: #2f6feb !important; outline: 3px solid #2f6feb24 !important; outline-offset: 2px; }
+.dp-ocr-review-fields > label > span { min-height: 42px; line-height: 1.5; }
+@media(max-width:640px) { .dp-ocr-review-fields > label > span { min-height: 21px; } }
+
+.dp-ocr-review-fields > label > span { align-content: end; }

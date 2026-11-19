@@ -1,0 +1,36 @@
+/* One appearance system, scoped to the proposed redesign. Original mode is unchanged.
+   Values are shared with portal style objects through surface-tokens.ts. */
+html:has(body.preview-redesign),body.preview-redesign{background:var(--dp-canvas,#f5f6fb);min-height:100dvh}
+body.preview-redesign{color:var(--dp-ink);font-family:'Geist','Heebo','Noto Sans Arabic',sans-serif}
+.preview-redesign #product-content{--dp-bg:var(--dp-canvas);--dp-bg-secondary:var(--dp-paper);--dp-text:var(--dp-ink);--dp-text-secondary:var(--dp-muted);--dp-border:var(--dp-line);--dp-primary:var(--dp-blue)}
+/* Identical plain canvas for the homepage, help, legal, account, claim and auth pages. */
+body.preview-redesign :is(.dp-site,.dp-client-portal){background:var(--dp-canvas)!important;background-image:none!important;color:var(--dp-ink);--approved-line:var(--dp-line);--site-line:var(--dp-line);--site-muted:var(--dp-muted);--site-ink:var(--dp-ink)}
+body.preview-redesign .dp-site::before,body.preview-redesign .source-portal .dp-client-portal::before{content:none!important;background:none!important}
+body.preview-redesign :is(.source-marketing,.source-portal,.dp-site-container,.source-portal main){background:transparent!important;background-image:none!important}
+/* All headers and ordinary panels use the same solid paper, border and light source. */
+body.preview-redesign :is(.dp-site-header,.dp-approved-header,.source-portal .dp-client-portal>header){background:var(--dp-paper)!important;border-color:var(--dp-line)!important;box-shadow:var(--dp-surface-shadow)!important;backdrop-filter:none!important}
+body.preview-redesign :is(.dp-site-calc-shell,.dp-site-panel,.dp-site-claim-types article,.dp-site-tutorials article,.dp-site-video,.dp-site-legal,.dp-site-about,.dp-site-about-values article,.dp-approved-case-card,.dp-approved-welcome,.dp-approved-tutorial){background:var(--dp-paper);border-color:var(--dp-line);border-radius:var(--dp-surface-radius)!important;box-shadow:var(--dp-surface-shadow)}
+body.preview-redesign .dp-site-calc-shell{background:var(--dp-paper)!important;backdrop-filter:none}
+body.preview-redesign :is(.dp-site-process,.dp-site-claim-types header,.dp-approved-stats,.dp-approved-case-next,.dp-approved-expense-context,.dp-site-calc-result){background:var(--dp-tint);color:var(--dp-ink);border-color:var(--dp-line);border-radius:var(--dp-surface-radius)}
+body.preview-redesign .dp-approved-portal .dp-approved-case-secondary>section{background:var(--dp-paper)!important;border-color:var(--dp-line)!important}
+body.preview-redesign .dp-approved-case-card{border-top-color:var(--dp-line-strong)}
+body.preview-redesign .dp-site-footer{background:var(--dp-canvas);border-color:var(--dp-line);color:var(--dp-muted)}
+body.preview-redesign .dp-approved-nav{border-top-color:var(--dp-line)}
+body.preview-redesign .source-portal[data-source-route="/client/login"] section:has([data-testid="client-login-card"]){background:var(--dp-paper)!important;border-color:var(--dp-line)!important;border-radius:var(--dp-surface-radius)!important;box-shadow:var(--dp-surface-shadow)!important;backdrop-filter:none!important}
+body.preview-redesign .source-portal :is(main section[style*="border"],[data-testid="client-stats-summary"]>div,[data-testid="claim-flow"]>div){border-radius:var(--dp-surface-radius)!important}
+body.preview-redesign .source-portal :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea){background:var(--dp-field)!important;border-color:var(--dp-line-strong)!important;border-radius:var(--dp-field-radius)!important;color:var(--dp-ink)}
+/* Include native dialogs portalled to document.body, outside #product-content. */
+body.preview-redesign :is(dialog,[role="dialog"]){background:var(--dp-paper)!important;background-image:none!important;color:var(--dp-ink)!important;border-color:var(--dp-line)!important;border-radius:var(--dp-surface-radius)!important;box-shadow:var(--dp-dialog-shadow)!important;font-family:inherit}
+body.preview-redesign dialog::backdrop{background:var(--dp-dialog-backdrop)!important;backdrop-filter:blur(6px)!important}
+body.preview-redesign :is(dialog,[role="dialog"]) :is(header,footer,.dp-approved-tutorial-player-heading){background:var(--dp-paper)!important;border-color:var(--dp-line)!important;color:var(--dp-ink)}
+body.preview-redesign [data-testid="poa-signing-modal"]>div>footer{background:var(--dp-paper)!important}
+body.preview-redesign :is(dialog,[role="dialog"]) :is(button,select,input,textarea){font-family:inherit;border-radius:var(--dp-field-radius)!important}
+body.preview-redesign :is(dialog,[role="dialog"]) button{border-color:var(--dp-line-strong)!important}
+body.preview-redesign :is(dialog,[role="dialog"]) :focus-visible{outline:3px solid var(--dp-blue);outline-offset:3px}
+body.preview-redesign :is(.dp-approved-tutorial-close,[data-testid="poa-signing-modal"] header button){background:var(--dp-paper)!important;color:var(--dp-blue)!important;border-color:var(--dp-line-strong)!important}
+body.preview-redesign :is(.dp-site-video,.dp-approved-tutorial-player) video{background:#1b2d48;border-radius:var(--dp-field-radius)}
+/* Consent uses the same floating-panel treatment on every route. */
+body.preview-redesign #product-content aside[role="region"][style*="position: fixed"]{background:var(--dp-paper)!important;border-color:var(--dp-line)!important;border-radius:var(--dp-surface-radius)!important;box-shadow:var(--dp-dialog-shadow)!important;color:var(--dp-ink)}
+
+/* Keep native consent checkboxes independent of full-width form input rules. */
+body.preview-redesign :is(dialog,[role="dialog"],aside[role="region"]) input[type="checkbox"]{width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;max-width:18px!important;max-height:18px!important;padding:0!important;margin:0!important;flex:0 0 18px;accent-color:var(--dp-blue)}

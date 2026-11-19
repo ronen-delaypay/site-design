@@ -1,0 +1,2 @@
+import React from 'react';import {navigate} from './navigation';
+export default function Link({href,prefetch,replace,scroll,locale,children,onClick,...rest}:any){const value=typeof href==='string'?href:href?.pathname||'/';return <a {...rest} href={value.startsWith('/')?'#'+value:value} onClick={event=>{onClick?.(event);if(event.defaultPrevented||event.metaKey||event.ctrlKey||event.shiftKey||rest.target==='_blank')return;if(value.startsWith('/')){event.preventDefault();navigate(value,replace);if(scroll!==false)scrollTo(0,0);}}}>{children}</a>;}

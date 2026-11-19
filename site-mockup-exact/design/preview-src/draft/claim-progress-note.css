@@ -1,0 +1,7 @@
+.dp-claim-progress-note { display: flex; align-items: flex-start; gap: 16px; margin-top: 24px; padding: 22px 24px; border: 1px solid var(--dp-line); border-inline-start: 4px solid #2f6feb; border-radius: 16px; background: var(--dp-paper); color: #24283f; text-align: start; animation: dp-progress-note-in .22s ease-out both; }
+.dp-claim-progress-icon { display: grid; place-items: center; flex: 0 0 42px; width: 42px; height: 42px; border-radius: 12px; background: var(--dp-tint); color: #2f6feb; }
+body.preview-redesign .dp-claim-progress-note h3 { margin: 0; font-size: 20px !important; font-weight: 600 !important; line-height: 1.35; text-align: start; }
+body.preview-redesign .dp-claim-progress-note p { margin: 6px 0 0; max-width: 65ch; font-size: 15px !important; line-height: 1.65; color: var(--dp-muted); text-align: start; }
+@keyframes dp-progress-note-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@media(prefers-reduced-motion:reduce) { .dp-claim-progress-note { animation: none; } }
+@media(max-width:600px) { .dp-claim-progress-note { padding: 18px 16px; gap: 12px; } body.preview-redesign .dp-claim-progress-note h3 { font-size: 18px !important; } }
