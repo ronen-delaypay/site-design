@@ -1,0 +1,18 @@
+.dp-site-footer .dp-site-social-links { display: flex; flex-basis: 100%; justify-content: center; align-items: center; gap: 12px; padding-top: 18px; border-top: 1px solid #dce4f0; }
+.dp-site-footer .dp-site-social-links a { display: inline-flex; width: 44px; height: 44px; min-height: 44px; align-items: center; justify-content: center; padding: 10px; border: 1px solid transparent; border-radius: 12px; transition: background-color .18s, border-color .18s; }
+.dp-site-footer .dp-site-social-links a:hover { background: #e3ebf8; border-color: #cad8ed; }
+.dp-site-footer .dp-site-social-links a:focus-visible { outline: 3px solid #2f6feb; outline-offset: 3px; }
+.dp-site-footer .dp-site-social-links svg { display: block; flex-shrink: 0; }
+
+/* Hero copy is centered over the full-width action group. */
+body.preview-redesign .dp-site-intro { min-width: 0; }
+body.preview-redesign .dp-site-intro > h1,
+body.preview-redesign .dp-site-intro > p:not(.dp-site-small) { text-align: center; margin-inline: auto; }
+body.preview-redesign .dp-site-intro > .dp-site-hero-actions { width: 100%; max-width: none; margin: 24px 0 0; }
+
+/* Compact hero copy: one centered text block directly above the actions. */
+body.preview-redesign .dp-site-intro > h1 { font-size: clamp(28px, 2.25vw, 34px); line-height: 1.18; letter-spacing: -.025em; margin: 0 auto; text-wrap: balance; }
+body.preview-redesign .dp-site-intro > p:not(.dp-site-small) { max-width: 44ch; font-size: 16px; line-height: 1.6; margin: 12px auto 0; text-wrap: balance; }
+body.preview-redesign .dp-site-intro > .dp-site-hero-actions { margin-top: 18px; gap: 10px; }
+body.preview-redesign .dp-site-intro > .dp-site-small { margin-top: 14px; font-size: 12px !important; }
+@media(max-width:760px) { body.preview-redesign .dp-site-intro > h1 { font-size: 28px; line-height: 1.18; } body.preview-redesign .dp-site-intro > p:not(.dp-site-small) { font-size: 15px; margin-top: 10px; } }

@@ -1,0 +1,8 @@
+import {useState,useRef,useEffect} from "react";
+import {Input} from "@/components/client/Input";
+import {useLocale} from "@/hooks/useLocale";
+import {isValidYmd} from "@/lib/claims/passenger-age";
+const copy={en:{hint:"Type DD/MM/YYYY — for example, 12/04/1990.",error:"Enter a valid date as DD/MM/YYYY."},he:{hint:"הקלידו יום/חודש/שנה — למשל 12/04/1990.",error:"הזינו תאריך תקין בפורמט יום/חודש/שנה."},ru:{hint:"Введите ДД/ММ/ГГГГ — например, 12/04/1990.",error:"Введите правильную дату в формате ДД/ММ/ГГГГ."},ar:{hint:"أدخلوا يوم/شهر/سنة — مثلاً 12/04/1990.",error:"أدخلوا تاريخًا صالحًا بصيغة يوم/شهر/سنة."}};
+const display=(value:string)=>/^\d{4}-\d{2}-\d{2}$/.test(value)?value.split("-").reverse().join("/"):value;
+export function birthDateValue(raw:string){const v=raw.trim();const match=v.match(/^(\d{1,2})[/.\-](\d{1,2})[/.\-](\d{4})$/);const iso=match?`${match[3]}-${match[2].padStart(2,"0")}-${match[1].padStart(2,"0")}`:v;return isValidYmd(iso)?iso:"";}
+export function BirthDateInput({value,onValueChange,label,name,...props}:any){const [locale]=useLocale();const text=copy[locale]??copy.en;const [raw,setRaw]=useState(()=>display(value));const [touched,setTouched]=useState(false);const emitted=useRef(value);useEffect(()=>{if(value!==emitted.current)setRaw(display(value));emitted.current=value;},[value]);return <Input {...props} name={name} label={label+" *"} type="text" autoComplete="bday" dir="ltr" placeholder="DD/MM/YYYY" value={raw} description={text.hint} error={touched&&!birthDateValue(raw)?text.error:undefined} onChange={event=>{setRaw(event.target.value);emitted.current=birthDateValue(event.target.value);onValueChange(emitted.current);}} onBlur={()=>{setTouched(true);const iso=birthDateValue(raw);if(iso)setRaw(display(iso));}} />;}

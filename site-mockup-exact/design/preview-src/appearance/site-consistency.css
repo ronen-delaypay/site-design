@@ -1,0 +1,136 @@
+/* One near-white blue surface across the customer mockup. */
+body.preview-redesign #product-content :is(.dp-site-header,.dp-approved-header,.dp-site-panel,.dp-site-tutorials article,.dp-approved-tutorial,.dp-approved-tutorial-topic,.dp-site-about,.dp-site-about-values article,.dp-approved-case-card,.dp-approved-welcome,.draft-six-steps,.dp-flow-stage-panel,.dp-claim-progress-note) { background-color: var(--dp-paper) !important; border-color: var(--dp-line); }
+body.preview-redesign #product-content :is([style*="background: white"],[style*="background-color: white"],[style*="background: rgb(255, 255, 255)"],[style*="background-color: rgb(255, 255, 255)"]) { background-color: var(--dp-paper) !important; }
+body.preview-redesign #product-content .source-portal main :is(input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]),select,textarea) { background: var(--dp-field) !important; border-color: var(--dp-line-strong) !important; border-radius: var(--dp-field-radius) !important; font-family: inherit; box-sizing: border-box; }
+body.preview-redesign #product-content .source-portal main input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="hidden"]) { height: 54px; min-height: 54px; }
+body.preview-redesign #product-content .dp-site-hero-actions .dp-site-action:nth-child(n+2) { background: var(--dp-field); }
+body.preview-redesign #product-content [data-testid="claim-flow-upload-success"] { background: var(--dp-paper); border-color: var(--dp-line); }
+body.preview-redesign #product-content [data-testid="claim-documents-step"] button[aria-pressed="true"] { background: var(--dp-tint) !important; border-color: #9ab8e8 !important; }
+body.preview-redesign #product-content .dp-ocr-review-confirm { background: var(--dp-tint); border-color: var(--dp-line-strong); }
+/* Labels share one grid row per pair; inputs share the next, including native dates. */
+body.preview-redesign #product-content .dp-ocr-review-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 24px; row-gap: 8px; }
+body.preview-redesign #product-content .dp-ocr-review-fields > label { margin: 0 !important; padding-bottom: 8px; display: grid; grid-template-rows: auto 54px auto; align-content: start; gap: 8px; min-width: 0; }
+body.preview-redesign #product-content .dp-ocr-review-fields > label > span { display: block; min-height: 0; align-content: normal; line-height: 1.5; }
+body.preview-redesign #product-content .dp-ocr-review-fields input { width: 100%; height: 54px; min-height: 54px; max-height: 54px; margin: 0; padding: 14px 16px !important; line-height: 24px !important; }
+@supports(grid-template-rows:subgrid) { body.preview-redesign #product-content .dp-ocr-review-fields > label { grid-row: span 3; grid-template-rows: subgrid; } }
+/* The signing frame uses the same surfaces and action hierarchy as the other stages. */
+body.preview-redesign #product-content .dp-poa-frame { background: var(--dp-paper); border-color: var(--dp-line) !important; border-radius: 16px !important; }
+body.preview-redesign #product-content .dp-poa-frame-header { background: var(--dp-tint) !important; border-color: var(--dp-line) !important; padding: 14px 20px !important; }
+body.preview-redesign #product-content .dp-poa-frame-body { background: var(--dp-paper) !important; padding: 24px !important; }
+body.preview-redesign #product-content .dp-poa-frame #poa-widget { margin: 0 !important; padding: 0 !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: transparent !important; }
+body.preview-redesign #product-content .dp-poa-frame #poa-widget > .dp-case-action-title { display: none; }
+body.preview-redesign #product-content #poa-widget .dp-case-status-panel { padding: 0 !important; border: 0 !important; background: var(--dp-paper) !important; }
+body.preview-redesign #product-content #poa-widget .dp-case-status-content { display: flex; flex-direction: column; align-items: stretch; gap: 0; min-width: 0; text-align: start; }
+body.preview-redesign #product-content #poa-widget .dp-case-status-heading { display: flex; align-items: center; justify-content: flex-start; gap: 10px; padding: 14px 16px; margin: 0 0 18px; border: 1px solid var(--dp-line); border-radius: 12px; background: var(--dp-tint); text-align: start; }
+body.preview-redesign #product-content #poa-widget .dp-case-status-title { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.4; text-align: start; }
+body.preview-redesign #product-content #poa-widget .dp-case-status-icon { flex-shrink: 0; }
+body.preview-redesign #product-content #poa-widget[data-poa-state="signed"] .dp-case-status-heading { background: #f1f8f4; border-color: #c8e2d3; }
+body.preview-redesign #product-content #poa-widget[data-poa-state="recovery"] .dp-case-status-heading { background: #fff9ef; border-color: #ead7b2; }
+body.preview-redesign #product-content #poa-widget :is([data-testid="poa-status-description"],[data-testid="poa-sign-intro"],[data-testid="poa-sign-external-note"]) { max-width: 65ch; margin: 0 0 14px; font-size: 15px !important; line-height: 1.7; text-align: start; color: var(--dp-muted); }
+body.preview-redesign #product-content #poa-widget .dp-poa-primary-actions { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px !important; margin-top: 8px; align-items: stretch; }
+body.preview-redesign #product-content #poa-widget .dp-poa-primary-actions > :is([data-testid="poa-sign-external-note"],[data-testid="poa-open-signing"]) { grid-column: 1/-1; }
+body.preview-redesign #product-content #poa-widget [data-testid="poa-open-signing"] { display: flex !important; align-items: center; justify-content: center; min-height: 54px; box-sizing: border-box; padding: 14px 22px !important; border: 1px solid var(--dp-blue); border-radius: 12px !important; background: var(--dp-blue) !important; color: white !important; font-family: inherit; font-size: 16px !important; font-weight: 550 !important; line-height: 1.4; text-decoration: none; }
+body.preview-redesign #product-content #poa-widget :is(.dp-poa-secondary-action,.dp-poa-create-links) { display: flex; align-items: center; justify-content: center; min-width: 0; box-sizing: border-box; padding: 12px 16px !important; border: 1px solid var(--dp-line-strong) !important; border-radius: 12px !important; background: var(--dp-field) !important; color: var(--dp-blue) !important; font-size: 14px !important; font-family: inherit; font-weight: 500 !important; line-height: 1.5; text-decoration: none !important; }
+body.preview-redesign #product-content #poa-widget .dp-poa-secondary-action { height: 64px; min-height: 64px; }
+body.preview-redesign #product-content #poa-widget .dp-poa-create-links { min-height: 54px; }
+body.preview-redesign #product-content #poa-widget :is(.dp-poa-secondary-action,.dp-poa-create-links):hover:not(:disabled) { background: var(--dp-tint) !important; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] { margin-top: 28px !important; padding-top: 24px !important; border-color: var(--dp-line) !important; text-align: start; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] > div:nth-child(2) { max-width: 65ch; font-size: 15px !important; line-height: 1.7; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] li { padding: 20px !important; border-radius: 14px !important; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] li:not([data-passenger-status="signed"]) { background: var(--dp-field) !important; border-color: var(--dp-line) !important; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] li > div > div:has(>a) { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px !important; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] li :is(a,button) { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; min-height: 54px; padding: 12px 16px !important; border-radius: 12px !important; font-family: inherit; font-size: 14px !important; font-weight: 550 !important; line-height: 1.5; text-decoration: none; }
+body.preview-redesign #product-content #poa-widget [data-poa-passengers] li button { border: 1px solid var(--dp-line-strong) !important; background: var(--dp-field) !important; color: var(--dp-blue) !important; }
+@media(max-width:640px) { body.preview-redesign #product-content .dp-ocr-review-fields { grid-template-columns: minmax(0,1fr); } body.preview-redesign #product-content .dp-poa-frame-body { padding: 18px 16px !important; } body.preview-redesign #product-content #poa-widget .dp-poa-primary-actions { grid-template-columns: minmax(0,1fr); } body.preview-redesign #product-content #poa-widget [data-poa-passengers] li { padding: 16px !important; } body.preview-redesign #product-content #poa-widget [data-poa-passengers] li > div > div:has(>a) { grid-template-columns: minmax(0,1fr); } }
+
+body.preview-redesign #product-content :is(.dp-site-skip,.dp-site-airline-window,.dp-site-section-title > button) { background: var(--dp-paper) !important; border-color: var(--dp-line); }
+body.preview-redesign #product-content .dp-claim-progress-note { border-inline-start-color: var(--dp-blue) !important; }
+
+/* Restored source comboboxes share the same label/input rows as ordinary fields. */
+body.preview-redesign #product-content fieldset.dp-ocr-review-fields { border: 0; padding: 0; margin: 0; min-inline-size: 0; }
+body.preview-redesign #product-content .dp-ocr-review-fields > .dp-ocr-field { display: grid; grid-template-rows: auto 54px auto; gap: 8px; margin: 0; padding-bottom: 8px; min-width: 0; position: relative; }
+body.preview-redesign #product-content .dp-ocr-field > div:first-child { position: relative; display: grid; grid-template-rows: auto 54px; gap: 8px; min-width: 0; }
+body.preview-redesign #product-content .dp-ocr-field label { display: block; margin: 0 !important; min-height: 0; font-size: 14px !important; line-height: 1.5; font-weight: 550; text-align: start; }
+body.preview-redesign #product-content .dp-ocr-field-help { grid-row: 3; margin: 0; font-size: 13px; }
+@supports(grid-template-rows:subgrid) {
+ body.preview-redesign #product-content .dp-ocr-review-fields > .dp-ocr-field { grid-row: span 3; grid-template-rows: subgrid; }
+ body.preview-redesign #product-content .dp-ocr-field > div:first-child { grid-row: 1/3; grid-template-rows: subgrid; }
+}
+body.preview-redesign #product-content .dp-ocr-field :is([role="listbox"],ul[role="listbox"]) { z-index: 40; background: var(--dp-paper) !important; border: 1px solid var(--dp-line-strong); border-radius: 12px; box-shadow: var(--dp-dialog-shadow); }
+body.preview-redesign #product-content .dp-ocr-field [role="option"][aria-selected="true"] { background: var(--dp-tint) !important; }
+body.preview-redesign #product-content .dp-ocr-review-fields:disabled { opacity: .7; }
+body.preview-redesign #product-content .dp-ocr-review-fields:disabled [role="listbox"] { display: none; }
+body.preview-redesign #product-content .source-portal main .dp-ocr-field input[role="combobox"]:not([type="hidden"]) { padding-inline-start: 38px !important; }
+body.preview-redesign #product-content .source-portal main .dp-ocr-field[data-field="flightNumber"] input[role="combobox"]:not([type="hidden"]) { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23606a80' stroke-width='1.8'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='m16 16 4.5 4.5'/%3E%3C/svg%3E") !important; background-repeat: no-repeat !important; background-size: 14px !important; background-position: 10px center !important; }
+body.preview-redesign #product-content .dp-ocr-field[data-field="origin"] > div > div,
+body.preview-redesign #product-content .dp-ocr-field[data-field="destination"] > div > div { direction: ltr; }
+body.preview-redesign #product-content .dp-ocr-field:is([data-field="origin"],[data-field="destination"],[data-field="flightNumber"]) input { direction: ltr; text-align: left; }
+
+/* Recorded reimbursement journey: equal choice cards, visible relevant questions and usable DOB entry. */
+body.preview-redesign .dp-claim-grid{align-items:stretch}
+body.preview-redesign .dp-claim-grid>button{min-width:0;justify-content:space-between}
+body.preview-redesign .dp-claim-grid>button>span:last-child{min-height:76px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;overflow-wrap:anywhere}
+body.preview-redesign [data-question-missing="true"]{outline:1px solid #c43f55;outline-offset:8px;border-radius:10px}
+body.preview-redesign [data-testid^="quick-claim-passenger-"]:not(input):not(button):not(label){min-width:0}
+body.preview-redesign [data-testid$="-dob"]{width:100%;min-height:54px;direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+body.preview-redesign [data-testid="reimbursement-documents"]{margin-top:28px}
+body.preview-redesign [data-testid="reimbursement-receipts-toggle"]{min-height:64px}
+@media(max-width:639px){body.preview-redesign .dp-claim-grid>button>span:last-child{font-size:15px;min-height:64px}}
+
+/* One saved-result layout for passport, booking confirmation and boarding pass. */
+body.preview-redesign .draft-scan-result{padding:28px!important;background:var(--dp-paper)!important;border:1px solid var(--dp-line)!important;box-shadow:var(--dp-surface-shadow)}
+.draft-scan-result>header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px}
+.draft-scan-kind{color:var(--dp-muted);font-size:13px;font-weight:600}
+.draft-scan-result h3{margin:8px 0;font-size:23px}
+.draft-scan-file{margin:0;font-size:13px;color:var(--dp-muted);overflow-wrap:anywhere}
+.draft-scan-saved{flex-shrink:0;border-radius:20px;padding:8px 12px;background:#e9f7f1;color:#08765e;font-size:13px;font-weight:600}
+.draft-scan-result footer{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:24px;border-top:1px solid var(--dp-line);padding-top:20px}
+.draft-scan-result footer p{margin:0;max-width:65ch;font-size:14px;color:var(--dp-muted);line-height:1.6}
+.draft-review-document{min-height:48px;flex-shrink:0;border:0;border-radius:12px;padding:12px 20px;background:var(--dp-primary,#2f6feb);color:#fff;font:600 15px inherit;cursor:pointer}
+.draft-review-document:disabled{opacity:.5;cursor:wait}
+body.preview-redesign :is(dialog,[role="dialog"]){box-sizing:border-box;max-width:calc(100vw - 32px);padding:28px;border-radius:20px;background:var(--dp-paper);color:var(--dp-ink)}
+body.preview-redesign :is(dialog,[role="dialog"]) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),select,textarea){box-sizing:border-box;width:100%;min-width:0}
+@media(max-width:639px){body.preview-redesign .draft-scan-result{padding:20px!important}.draft-scan-result>header{flex-direction:column;gap:12px}.draft-scan-result footer{flex-direction:column;align-items:stretch}.draft-review-document{width:100%}.draft-scan-result dl{grid-template-columns:minmax(0,1fr)}body.preview-redesign :is(dialog,[role="dialog"]){padding:20px}}
+
+/* Match the entry form's labels, input baselines and helper rows. */
+body.preview-redesign #product-content .dp-claim-fields>div{display:grid;grid-template-rows:auto 54px auto;row-gap:8px;min-width:0;align-content:start}
+body.preview-redesign #product-content .dp-claim-fields>div>label{grid-row:1;margin:0!important;align-self:end;font-size:14px!important}
+body.preview-redesign #product-content .dp-claim-fields>div>:is(input:not([type="hidden"]),div:not(:first-child)){grid-row:2;min-width:0}
+body.preview-redesign #product-content .dp-claim-fields input:not([type="hidden"]),body.preview-redesign #product-content .dp-claim-fields select{height:54px;box-sizing:border-box;width:100%}
+body.preview-redesign #product-content .dp-claim-fields>div>p{grid-row:3;margin:0!important}
+body.preview-redesign #product-content .dp-claim-fields>div>div:first-child{display:grid;grid-template-rows:auto 54px;row-gap:8px;grid-row:1/3}
+body.preview-redesign #product-content .dp-claim-fields>div>div:first-child>label{margin:0!important;align-self:end;font-size:14px!important}
+body.preview-redesign #product-content .dp-claim-fields>div>div:first-child>input{grid-row:2}
+body.preview-redesign #product-content .dp-claim-fields input[type="hidden"]{display:none}
+@supports(grid-template-rows:subgrid){body.preview-redesign #product-content .dp-claim-fields>div{grid-row:span 3;grid-template-rows:subgrid}body.preview-redesign #product-content .dp-claim-fields>div>div:first-child{grid-template-rows:subgrid}}
+body.preview-redesign #product-content .draft-review-document{background:#2f6feb;color:#fff;font-family:inherit;font-size:15px;font-weight:600}
+
+/* One missing-detail popup and passenger pattern at every stage. */
+body.preview-redesign dialog.dp-missing-details-dialog{width:min(560px,calc(100vw - 32px));margin:auto;border:1px solid var(--dp-line);box-shadow:var(--dp-dialog-shadow);max-height:calc(100dvh - 48px);overflow:auto}
+.dp-missing-details-dialog::backdrop{background:rgba(36,40,63,.35)}
+.dp-missing-details-dialog h2{font-size:25px;line-height:1.25;margin:0 0 12px}
+.dp-missing-details-dialog p{color:var(--dp-muted);line-height:1.6}
+.dp-missing-details-dialog ul{padding-inline-start:20px;margin:20px 0;display:grid;gap:10px}
+.dp-missing-details-dialog li>button{background:none;border:0;padding:4px;text-align:start;font:inherit;color:#245fc7;text-decoration:underline;cursor:pointer;overflow-wrap:anywhere}
+.dp-missing-details-dialog footer{display:flex;justify-content:flex-end;gap:12px;border-top:1px solid var(--dp-line);padding-top:20px}
+.dp-missing-details-dialog footer button{min-height:48px;border-radius:12px;font:600 15px inherit;padding:10px 18px;cursor:pointer}
+.dp-missing-complete{background:#2f6feb;border:1px solid #2f6feb;color:white}.dp-missing-close{background:var(--dp-paper);border:1px solid var(--dp-line);color:var(--dp-ink)}
+.draft-passenger-select{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin:24px 0;font-size:15px;font-weight:600}
+.draft-passenger-select select{height:54px;border:1px solid var(--dp-line);border-radius:12px;background:var(--dp-field);font:inherit;color:var(--dp-ink);padding:12px}
+.dp-passenger-account-status{font-size:13px;color:#08765e;overflow-wrap:anywhere}
+.dp-passenger-review{margin-top:28px;border-top:1px solid var(--dp-line);padding-top:24px}
+.dp-passenger-review h3{font-size:20px;line-height:1.45;margin:0 0 20px}
+.dp-passenger-review-card{border:1px solid var(--dp-line);border-radius:16px;padding:20px;margin:0 0 20px;background:var(--dp-paper)}
+.dp-passenger-review-card legend{font-weight:600;padding:0 8px}
+.dp-passenger-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.dp-passenger-review-grid input{width:100%;height:54px}
+.dp-passenger-confirm{display:flex;gap:12px;align-items:flex-start;margin-top:20px;padding:16px;background:var(--dp-tint,#f0f5fd);border-radius:12px;line-height:1.6}
+.dp-passenger-confirm input{width:20px;height:20px;flex-shrink:0;margin-top:3px;accent-color:#2f6feb}
+@media(max-width:639px){.dp-passenger-review-grid{grid-template-columns:minmax(0,1fr)}.dp-missing-details-dialog footer{flex-direction:column-reverse}.dp-missing-details-dialog footer button{width:100%}}
+
+body.preview-redesign .dp-passenger-editor-row>div:not(:first-child){display:grid;grid-template-rows:auto 54px auto;gap:8px;min-width:0}
+body.preview-redesign .dp-passenger-editor-row>div:not(:first-child)>label{margin:0!important;align-self:end}
+body.preview-redesign .dp-passenger-editor-row>div:not(:first-child)>input{height:54px;width:100%;box-sizing:border-box}
+body.preview-redesign .dp-passenger-editor-row>div:not(:first-child)>p{margin:0!important}
+@supports(grid-template-rows:subgrid){body.preview-redesign .dp-passenger-editor-row>div:not(:first-child){grid-row:span 3;grid-template-rows:subgrid}}
+@media(max-width:639px){body.preview-redesign .dp-passenger-editor-row{grid-template-columns:minmax(0,1fr)!important}}

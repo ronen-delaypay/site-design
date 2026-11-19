@@ -1,0 +1,3 @@
+.dp-tutorial-placeholder :is(.dp-site-video-cover,.dp-approved-tutorial-cover):disabled { opacity: 1; cursor: default; }
+.dp-tutorial-placeholder :is(.dp-site-action,.dp-approved-tutorial-watch):disabled { opacity: 1; cursor: default; }
+.dp-tutorial-placeholder :is(button):disabled:hover { transform: none; box-shadow: none; }

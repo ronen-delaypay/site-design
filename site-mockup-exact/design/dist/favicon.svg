@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DelayPay">
+  <rect width="64" height="64" rx="14" fill="#0b1f3a"/>
+  <path d="M18 13h14c10 0 17 7 17 19s-7 19-17 19H18V13Zm12 29c5 0 8-4 8-10s-3-10-8-10h-3v20h3Z" fill="#fff"/>
+  <path d="M43 13h5v38h-5z" fill="#39b9ff"/>
+</svg>
